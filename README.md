@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".src/assets/logo.png" alt="Logo Agroecosistemas" width="300">
+  <img src="./src/assets/logo.png" alt="Logo Agroecosistemas" width="300">
 </p>
 
 # Agroecosistemas 🌱
