@@ -1,27 +1,37 @@
-# Agroecosystems
+<p align="center">
+  <img src=".src/assets/logo.png" alt="Logo Agroecosistemas" width="300">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+# Agroecosistemas 🌱
 
-## Development server
+**Agroecosistemas** é uma plataforma interativa em formato de site _one page_ voltada ao ensino e consulta de conceitos ecológicos aplicados à agroecologia.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🔍 O que é?
 
-## Code scaffolding
+Este projeto tem como objetivo facilitar a compreensão de como conceitos fundamentais da ecologia podem ser aplicados no estudo, análise e manejo de **agroecossistemas**. O conteúdo é apresentado em blocos explicativos, cada um abordando um conceito específico, como biodiversidade, sucessão ecológica, níveis de organização, entre outros.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🎯 Objetivo
 
-## Build
+Fornecer uma trilha de aprendizagem leve, acessível e didática sobre ecologia e agroecologia para estudantes, professores, agricultores e curiosos. O usuário pode:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Rolar a página para explorar os conceitos sequencialmente;
+- Utilizar a barra de busca para acessar diretamente um conceito específico;
+- Navegar pela lista dropdown para encontrar temas de interesse.
 
-## Running unit tests
+## 🛠️ Tecnologias utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Angular 17**
+- HTML / CSS
+- GitHub Pages para deploy
 
-## Running end-to-end tests
+## 🚧 Status do projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Em desenvolvimento** – melhorias visuais e funcionais, bem como novos conceitos estão sendo adicionados.
 
-## Further help
+## 🌐 Acesse o site
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+👉 [https://daniloasdotcom.github.io/agroecosystems/](https://daniloasdotcom.github.io/agroecosystems/)
+
+## 👨‍💻 Autor
+
+Desenvolvido por [Danilo Andrade Santos](https://daniloas.com)

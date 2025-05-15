@@ -1,25 +1,69 @@
 <app-header></app-header>
 <section id="intro">
   <h2>O que são Agroecossistemas?</h2>
-  <p>Agroecossistemas são sistemas agrícolas sustentáveis que integram práticas ecológicas e sociais...</p>
+  <p>Um agroecossistema é uma unidade social de apropriação e conversão de bens ecológicos em bens econômicos e sua delimitação física é demarcada pelo espaço ambiental apropriado por um núcleo social que o gerencia</p>
+
+  <div class="subsection">
+    <app-ecosystem-comparison></app-ecosystem-comparison>
+    <app-ecological-industrial></app-ecological-industrial>
+  </div>
+
 </section>
 
-<section id="benefits">
-  <h2>Benefícios</h2>
-  <ul>
-    <li>Preservação ambiental</li>
-    <li>Melhoria da saúde do solo</li>
-    <li>Redução do uso de insumos químicos</li>
-  </ul>
+<section id="manejodepragas">
+  <h2>Manejo Ecológico de Pragas</h2>
+  <app-concept-pestmanagement></app-concept-pestmanagement>
+  <div class="subsection">
+    <button (click)="toggleSection('origem')">Diversificação de cultivos🌿</button>
+    <div *ngIf="expandedSections['origem']">
+      <ul>
+        <li>Policultivos e consórcios</li>
+        <li>Variedades múltiplas e genéticas no tempo e espaço</li>
+        <li>Integração de culturas alimentares, forrageiras, medicinais e atrativas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('componentes')">Cultivo de Plantas de Cobertura🌿
+</button>
+    <div *ngIf="expandedSections['componentes']">
+      <p>Cobertura verde no inverno e no verão para atrair inimigos naturais, melhorar solo e fornecer abrigo
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('importancia')">Importância Atual</button>
+    <div *ngIf="expandedSections['importancia']">
+      <p>Diante das mudanças climáticas e demandas por sustentabilidade...</p>
+    </div>
+  </div>
 </section>
 
-<section id="practices">
-  <h2>Práticas Sustentáveis</h2>
-  <p>Uso de compostagem, rotação de culturas, integração lavoura-pecuária...</p>
+<section id="niveisorganizacao">
+  <h2>Níveis de Organização</h2>
+  <p>Ecossistemas podem ser estudados segundo uma hierarquia de organização que passa pelo individuo (aqui estudanmos autoecologia). O agrupamente de individuos da mesma espécie forma o próximo nível, chamado de população. O grupo de populações de diferentes espécies forma o nível seguinte, chamado de comunidade. E o nível mais alto de um ecossistemas é o ecossistema.</p>
+  <app-individuo></app-individuo>
 </section>
 
-<section id="examples">
-  <h2>Exemplos Reais</h2>
-  <p>Casos de sucesso no Brasil e no mundo que aplicam princípios da agroecologia...</p>
+<section id="biodiversidade">
+  <h2>Biodiversidade</h2>
+  <app-biodiversidade></app-biodiversidade>
 </section>
+
+<section id="perturbation">
+  <h2>Perturbação</h2>
+  <app-perturbation></app-perturbation>
+</section>
+
+<section id="sucessao">
+  <h2>Sucessão</h2>
+  <app-sucessao></app-sucessao>
+</section>
+
+<section id="nicho">
+  <h2>Nicho</h2>
+  <app-nicho></app-nicho>
+</section>
+
 <app-footer></app-footer>

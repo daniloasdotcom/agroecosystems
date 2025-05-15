@@ -1,0 +1,94 @@
+/* Wrapper opcional para prevenir rolagem horizontal */
+.comparison-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Estilo da tabela em telas médias e grandes */
+.comparison-table {
+  display: table;
+  width: 100%;
+  border-spacing: 0 10px;
+  margin: 20px auto;
+  max-width: 900px;
+
+  .comparison-header,
+  .comparison-row {
+    display: table-row;
+
+    div {
+      display: table-cell;
+      width: 50%;
+      padding: 15px 10px;
+      text-align: center;
+      vertical-align: middle;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .comparison-header {
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+  }
+
+  .comparison-row {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .comparison-table {
+    display: block;
+  }
+
+  .comparison-header,
+  .comparison-row {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .comparison-header div,
+  .comparison-row div {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .comparison-header {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.comparison-explanation {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #e6f4e6; // tom suave de verde, para harmonia visual
+  border-left: 4px solid #4caf50; // destaque sutil com uma cor associada à natureza
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+
+  p {
+    margin: 0;
+    text-align: justify;
+  }
+}

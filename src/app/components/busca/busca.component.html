@@ -1,0 +1,32 @@
+<div class="busca-container">
+  <div class="input-wrapper">
+    <input
+      type="text"
+      [(ngModel)]="termo"
+      (input)="onInput()"
+      placeholder="🔍 Buscar conceito..."
+    />
+    <button class="toggle" (click)="toggleDropdown()">
+      ▼
+    </button>
+  </div>
+
+  <!-- Lista filtrada -->
+  <ul *ngIf="mostrarDropdown && termo && resultados.length > 0" class="dropdown">
+    <li *ngFor="let conceito of resultados" (click)="navegarPara(conceito.id)">
+      {{ conceito.titulo }}
+    </li>
+  </ul>
+
+  <!-- Nenhum resultado -->
+  <ul *ngIf="mostrarDropdown && termo && resultados.length === 0" class="dropdown">
+    <li class="sem-resultado">Nenhum resultado encontrado</li>
+  </ul>
+
+  <!-- Lista completa apenas via seta -->
+  <ul *ngIf="mostrarDropdown && !termo" class="dropdown">
+    <li *ngFor="let conceito of conceitos" (click)="navegarPara(conceito.id)">
+      {{ conceito.titulo }}
+    </li>
+  </ul>
+</div>
