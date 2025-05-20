@@ -10,10 +10,15 @@ import { BiodiversidadeComponent } from '../biodiversidade/biodiversidade.compon
 import { PerturbationComponent } from '../perturbation/perturbation.component';
 import { SucessaoComponent } from '../sucessao/sucessao.component';
 import { NichoComponent } from '../nicho/nicho.component';
+import { ProducaoPrimariaComponent } from '../producao-primaria/producao-primaria.component';
+import { EstrategiarkComponent } from '../estrategiark/estrategiark.component';
+
+
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, EcosystemComparisonComponent, EcologicalIndustrialComponent, ConceptPestmanagementComponent, IndividuoComponent, BiodiversidadeComponent, PerturbationComponent, SucessaoComponent, NichoComponent], // ⬅️ Adicionar aqui
+  imports: [CommonModule, HeaderComponent, FooterComponent, EcosystemComparisonComponent, EcologicalIndustrialComponent, ConceptPestmanagementComponent, IndividuoComponent, BiodiversidadeComponent, PerturbationComponent, SucessaoComponent, NichoComponent, ProducaoPrimariaComponent, EstrategiarkComponent], // ⬅️ Adicionar aqui
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

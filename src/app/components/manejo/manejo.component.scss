@@ -41,6 +41,7 @@ ul {
 /* Gradientes por seção */
 #intro {
   background: linear-gradient(135deg, #a8e063, #56ab2f);
+  padding-top: 140px; // padrão para desktops
 }
 
 #manejodepragas {
@@ -64,11 +65,6 @@ ul {
 #nicho {
   background: linear-gradient(135deg, #b7f8db, #50c878)
 }
-
-#estrategiark {
-  background: linear-gradient(135deg, #9be15d, #00e3ae);
-}
-
 
 /* Ajustes responsivos para evitar sobreposição com o header */
 @media (max-width: 768px) {
@@ -120,7 +116,6 @@ ul {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-
 .page-content {
   margin-top: 200px; // Ajuste conforme o tamanho do seu header
 }

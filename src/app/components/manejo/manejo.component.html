@@ -1,0 +1,32 @@
+<app-header></app-header>
+<main class="page-content">
+<section id="manejodepragas">
+  <h2>Manejo Ecológico de Pragas</h2>
+  <app-concept-pestmanagement></app-concept-pestmanagement>
+  <div class="subsection">
+    <button (click)="toggleSection('origem')">Diversificação de cultivos🌿</button>
+    <div *ngIf="expandedSections['origem']">
+      <ul>
+        <li>Policultivos e consórcios</li>
+        <li>Variedades múltiplas e genéticas no tempo e espaço</li>
+        <li>Integração de culturas alimentares, forrageiras, medicinais e atrativas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('componentes')">Cultivo de Plantas de Cobertura🌿</button>
+    <div *ngIf="expandedSections['componentes']">
+      <p>Cobertura verde no inverno e no verão para atrair inimigos naturais, melhorar solo e fornecer abrigo
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('importancia')">Importância Atual</button>
+    <div *ngIf="expandedSections['importancia']">
+      <p>Diante das mudanças climáticas e demandas por sustentabilidade...</p>
+    </div>
+  </div>
+</section>
+</main>
+<app-footer></app-footer>

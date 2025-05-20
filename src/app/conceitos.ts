@@ -4,4 +4,6 @@ export const CONCEITOS = [
   { id: 'perturbation', titulo: 'Perturbação' },
   { id: 'sucessao', titulo: 'Sucessão Ecológica' },
   { id: 'nicho', titulo: 'Nicho' },
+  { id: 'producaoprimaria', titulo: 'Produção Primaria' },
+  { id: 'estrategiark', titulo: 'Estratégia r e K' },
 ];
