@@ -4,11 +4,12 @@
 
 # Agroecosistemas 🌱
 
-**Agroecosistemas** é uma plataforma interativa em formato de site _one page_ voltada ao ensino e consulta de conceitos ecológicos aplicados à agroecologia.
+**Agroecosistemas** é uma plataforma interativa em formato de site _one page_ voltada ao ensino e consulta de conceitos ecológicos aplicados à produção agropecuária.
 
 ## 🔍 O que é?
 
-Este projeto tem como objetivo facilitar a compreensão de como conceitos fundamentais da ecologia podem ser aplicados no estudo, análise e manejo de **agroecossistemas**. O conteúdo é apresentado em blocos explicativos, cada um abordando um conceito específico, como biodiversidade, sucessão ecológica, níveis de organização, entre outros.
+Este projeto tem como objetivo facilitar a compreensão de como conceitos fundamentais da ecologia podem ser aplicados no estudo, análise e manejo de **agroecossistemas**. 
+O conteúdo é apresentado em blocos explicativos, cada um abordando um conceito específico, como biodiversidade, sucessão ecológica, níveis de organização, entre outros.
 
 ## 🎯 Objetivo
 
@@ -30,7 +31,7 @@ Fornecer uma trilha de aprendizagem leve, acessível e didática sobre ecologia 
 
 ## 🌐 Acesse o site
 
-👉 [https://daniloasdotcom.github.io/agroecosystems/](https://daniloasdotcom.github.io/agroecosystems/)
+👉 [https://agroecossistemas.online/home](https://agroecossistemas.online/home)
 
 ## 👨‍💻 Autor
 
