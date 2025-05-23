@@ -4,7 +4,7 @@
 
 # Agroecosistemas 🌱
 
-**Agroecosistemas** é uma plataforma interativa em formato de site _one page_ voltada ao ensino e consulta de conceitos ecológicos aplicados à produção agropecuária.
+**Agroecosistemas** é uma plataforma em formato de site _one page_ voltada ao ensino e consulta de conceitos ecológicos aplicados à produção agropecuária.
 
 ## 🔍 O que é?
 

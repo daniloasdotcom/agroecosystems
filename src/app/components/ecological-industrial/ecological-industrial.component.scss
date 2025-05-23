@@ -5,6 +5,14 @@
   padding: 0 10px; /* pequena margem lateral */
 }
 
+.comparison-wrapper p {
+  color: black;
+  margin-bottom: 12px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
 /* === Estilo da "tabela" === */
 .comparison-table {
   display: table;
@@ -81,4 +89,31 @@
 .comparison-explanation p {
   margin: 0 0 10px;
   text-align: justify;
+}
+
+.curiosity-box {
+  border-left: 5px solid #4caf50;
+  background-color: #f6fdf7;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  font-style: italic;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.curiosity-box h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-style: normal;
+}
+
+.curiosity-box p {
+  margin: 0;
 }
