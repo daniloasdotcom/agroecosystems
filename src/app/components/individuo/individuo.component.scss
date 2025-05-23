@@ -22,3 +22,38 @@
   font-size: 1.5rem;
   font-weight: 700;
 }
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto; /* Centraliza e dá espaço ao redor, opcional */
+}
+
+.curiosity-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f1f8e9; /* Um verde mais claro para diferenciar */
+  border-left: 4px solid #81c784; /* Verde suave */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  border-radius: 4px;
+}
+
+.curiosity-box h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-style: normal;
+}
+
+.curiosity-box p,
+.curiosity-box ol,
+.curiosity-box li {
+  text-align: justify;
+}
