@@ -1,0 +1,267 @@
+<div class="explanation">
+  <h3>Ferramentas de Classificação de Uso da Terra</h3>
+  <p>
+    A compreensão da distinção entre o Sistema de Classificação de Capacidade de Uso da Terra (SCUT) e o Sistema de Avaliação de Aptidão Agrícola das Terras (SAAT) é fundamental para o planejamento do manejo do solo e o desenho de agroecossistemas. Ambas as ferramentas são cruciais, embora possuam enfoques e objetivos distintos.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Sistemas de Classificação de Terras 🗺️</h4>
+  <h3>SCUT vs. SAAT: Definição e Diferenciação</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('scutDefinition')">Sistema de Classificação de Capacidade de Uso da Terra (SCUT) 📐</button>
+    <div *ngIf="expandedSections['scutDefinition']">
+      <p>
+        O <b>Sistema de Classificação de Capacidade de Uso da Terra (SCCUT)</b>, de origem norte-americana (Soil Conservation Service - USDA), classifica as terras com base em suas <b>limitações permanentes</b> para o uso agrícola. Seu objetivo primordial é a <b>conservação do solo e da água</b>.
+        <br>
+        As terras são agrupadas em classes (geralmente de I a VIII) conforme o grau e o tipo de restrição que impõem à sua utilização. As classes I a IV são aptas para cultivo com diferentes requisitos de práticas conservacionistas, enquanto as classes V a VIII são progressivamente mais restritivas, sendo indicadas para usos menos intensivos como pastagens, silvicultura ou preservação.
+      </p>
+      <p>
+        As limitações consideradas no SCUT são intrínsecas ao ambiente, abrangendo:
+      </p>
+      <ul>
+        <li><strong>Limitações de erosão (e):</strong> relacionadas à declividade, erodibilidade do solo e comprimento da rampa.</li>
+        <li><strong>Limitações de solo (s):</strong> profundidade efetiva, pedregosidade, textura e fertilidade natural.</li>
+        <li><strong>Limitações de água (a ou w):</strong> excesso ou deficiência hídrica, drenagem.</li>
+        <li><strong>Limitações climáticas (c):</strong> temperatura e regime pluviométrico que afetam o crescimento das culturas.</li>
+      </ul>
+      <p>
+        O SCUT é um sistema predominantemente **qualitativo e interpretativo**, focando no risco de degradação do solo sob diferentes usos.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('saatDefinition')">Sistema de Avaliação de Aptidão Agrícola das Terras (SAAT) 🌾</button>
+    <div *ngIf="expandedSections['saatDefinition']">
+      <p>
+        O **Sistema de Avaliação de Aptidão Agrícola das Terras (SAAT)**, metodologia adaptada no Brasil (Embrapa Solos), avalia o **potencial produtivo das terras para distintos tipos de uso e sob variados níveis de manejo tecnológico**. Diferentemente do SCUT, o SAAT não se restringe às limitações permanentes, mas considera a possibilidade de sua superação ou mitigação pela aplicação de tecnologia e insumos.
+      </p>
+      <p>
+        O SAAT categoriza as terras em grupos de aptidão (e.g., aptas para lavouras, pastagens plantadas, silvicultura) e, dentro destes, em classes que expressam o grau de limitação para a produção sustentada. Sua distinção reside na inclusão explícita de **níveis de manejo tecnológico** (e.g., A, B, C, correspondendo a baixo, médio e alto investimento tecnológico, respectivamente). Isso permite uma avaliação mais dinâmica, reconhecendo que a aptidão de uma terra pode ser alterada pela tecnologia.
+      </p>
+      <p>
+        Os fatores considerados são análogos aos do SCUT, porém a interpretação da limitação é relativa ao nível de manejo e ao tipo de cultura ou uso específico.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="comparison-wrapper">
+    <div class="comparison-table">
+    <div class="comparison-header">
+        <div>Característica</div>
+        <div>Sistema de Classificação de Capacidade de Uso da Terra (SCUT)</div>
+        <div>Sistema de Avaliação de Aptidão Agrícola das Terras (SAAT)</div>
+    </div>
+
+    <div class="comparison-row">
+        <div><strong>Foco Principal</strong></div>
+        <div>Prevenção da degradação do solo (conservação).</div>
+        <div>Potencial produtivo para usos específicos.</div>
+    </div>
+
+    <div class="comparison-row">
+        <div><strong>Base de Classificação</strong></div>
+        <div>Limitações intrínsecas e permanentes do ambiente.</div>
+        <div>Limitações intrínsecas e superabilidade por tecnologia.</div>
+    </div>
+
+    <div class="comparison-row">
+        <div><strong>Níveis de Manejo</strong></div>
+        <div>Não incorpora explicitamente (pressupõe conservacionismo).</div>
+        <div>Incorpora explicitamente diferentes níveis tecnológicos.</div>
+    </div>
+
+    <div class="comparison-row">
+        <div><strong>Natureza</strong></div>
+        <div>Qualitativo, interpretativo, focado em risco.</div>
+        <div>Qualitativo/Quantitativo, interpretativo, focado em potencial.</div>
+    </div>
+
+    <div class="comparison-row">
+        <div><strong>Classes</strong></div>
+        <div>I a VIII (grau de limitação, decrescente para uso intensivo).</div>
+        <div>Grupos de aptidão e classes de aptidão dentro desses grupos.</div>
+    </div>
+    </div>
+    </div>
+
+<div class="explanation">
+  <h3>Utilidade no Manejo e Desenho da Paisagem de Agroecossistemas 🌳</h3>
+  <p>
+    Ambos os sistemas são ferramentas complementares de valor inestimável para o **manejo sustentável** e o **desenho da paisagem de agroecossistemas**, fornecendo informações cruciais para a tomada de decisão.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Aplicações Práticas dos Sistemas de Classificação 🛠️</h4>
+  <h3>Como SCUT e SAAT auxiliam no planejamento agrícola?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('scutUtility')">Utilidade do SCUT no Planejamento 🛡️</button>
+    <div *ngIf="expandedSections['scutUtility']">
+      <p>O SCUT é fundamental para estabelecer as **diretrizes básicas de conservação** na paisagem. Ele permite a identificação de áreas mais vulneráveis à degradação (principalmente erosão), o que é essencial para definir onde a intervenção antrópica deve ser minimizada ou onde práticas conservacionistas rigorosas são indispensáveis.</p>
+      <ul>
+        <li><strong>Zoneamento conservacionista:</strong> Delimita Áreas de Preservação Permanente (APPs), Reservas Legais (RLs) e outras áreas de uso restrito, mitigando o risco de erosão hídrica e eólica e protegendo recursos hídricos.</li>
+        <li><strong>Planejamento do uso da terra:</strong> Orienta a alocação de culturas anuais em áreas de menor declividade e maior fertilidade natural (classes I, II), direcionando áreas mais inclinadas ou com solos rasos para culturas perenes, pastagens ou sistemas agroflorestais (classes III, IV). As classes de maior limitação (V a VIII) são indicadas para conservação ou uso ecoturístico.</li>
+        <li><strong>Desenho de práticas conservacionistas:</strong> Fornece a base para o planejamento e implantação de terraços, curvas de nível, cordões de contorno e outras estruturas de controle da erosão, adaptando-as às limitações específicas de cada classe.</li>
+        <li><strong>Avaliação de riscos ambientais:</strong> Serve como ferramenta preliminar para identificar potenciais áreas de conflito de uso, onde o uso atual pode exceder a capacidade de suporte da terra, implicando em degradação ambiental.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('saatUtility')">Utilidade do SAAT na Otimização Produtiva 📈</button>
+    <div *ngIf="expandedSections['saatUtility']">
+      <p>O SAAT oferece uma perspectiva mais **pragmática e dinâmica** para o planejamento agrícola, integrando o nível de tecnologia e a viabilidade econômica de diferentes usos. Ele permite otimizar a produção ao considerar como as limitações podem ser superadas.</p>
+      <ul>
+        <li><strong>Otimização da produção:</strong> Identifica as áreas mais aptas para culturas específicas sob um determinado nível de investimento tecnológico. Uma terra pode ser inapta para lavoura de grãos com manejo de baixo insumo, mas tornar-se altamente apta com irrigação e adubação intensiva.</li>
+        <li><strong>Planejamento de sistemas produtivos:</strong> Auxilia na escolha de culturas e sistemas de produção mais adequados, como sistemas agroflorestais em áreas de aptidão restrita para lavouras, ou a intensificação de pastagens em terras de aptidão moderada.</li>
+        <li><strong>Alocação eficiente de recursos:</strong> Direciona investimentos em infraestrutura (drenagem, irrigação) e insumos (corretivos, fertilizantes) para áreas onde terão maior retorno e sustentabilidade, evitando desperdício em terras com limitações insuperáveis.</li>
+        <li><strong>Subsídio a políticas públicas:</strong> Fornece dados para o zoneamento agroecológico-econômico (ZAE), orientando a implantação de políticas de crédito rural, assistência técnica e programas de desenvolvimento regional que considerem a real capacidade e potencial produtivo das terras.</li>
+        <li><strong>Desenho de agroecossistemas resilientes:</strong> Permite conceber paisagens agrícolas que integram produção e conservação, aproveitando o potencial de cada parcela de terra de forma sustentável, diversificando os usos de acordo com suas aptidões e maximizando as interações ecológicas. Áreas de menor aptidão agrícola, por exemplo, podem ser destinadas à recuperação de ecossistemas ou ao cultivo de espécies nativas que complementem o agroecossistema.</li>
+      </ul>
+      <p>Em síntese, enquanto o SCUT estabelece os limites do que <em>não se deve fazer</em> para evitar a degradação, o SAAT indica o <em>melhor que se pode fazer</em> em termos de produção, considerando a tecnologia disponível. A integração de ambos os sistemas oferece uma base robusta para o planejamento territorial e o manejo adaptativo em agroecossistemas, conciliando produtividade e conservação.</p>
+    </div>
+  </div>
+</div>
+<img
+  ngSrc="assets/tabela_uso_solo.png"
+  width="816"
+  height="406"
+  class="responsive-img"
+  priority
+/>
+
+<div class="legenda-cores">
+  <div class="legenda-item">
+    <div class="legenda-cor cor-azul"></div>
+    <span>Sub utilização da terra</span>
+  </div>
+  <div class="legenda-item">
+    <div class="legenda-cor cor-amarelo"></div>
+    <span>Máxima utilização racional da terra</span>
+  </div>
+  <div class="legenda-item">
+    <div class="legenda-cor cor-vermelho"></div>
+    <span>Sobre utilização da terra</span>
+  </div>
+</div>
+
+<!--
+<table class="uso-table">
+  <thead>
+    <tr>
+      <th  class="titulo-coluna" colspan="9">-------- Sentido do aumento da intensidade de uso --------</th>
+    </tr>
+    <tr>
+      <th rowspan="3">Classes</th>
+      <th rowspan="3">Vida silvestre e recreação</th>
+      <th colspan="3">Silvicultura e Pastoreio</th>
+      <th rowspan="3">Ocasional ou limitado</th>
+      <th colspan="3">Cultivo</th>
+    </tr>
+    <tr>
+      <th rowspan="2">Limitado</th>
+      <th rowspan="2">Moderado</th>
+      <th rowspan="2">Intensivo</th>
+      <th colspan="3">Problemas de conservação</th>
+    </tr>
+    <tr>
+      <th>Problema complexo</th>
+      <th>Problema simples</th>
+      <th>Problema aparente</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>I</td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+    </tr>
+    <tr>
+      <td>II</td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+    </tr>
+    <tr>
+      <td>III</td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+    </tr>
+    <tr>
+      <td>IV</td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+    </tr>
+    <tr>
+      <td>V</td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+    </tr>
+    <tr>
+      <td>VI</td>
+      <td class="azul"></td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+    </tr>
+    <tr>
+      <td>VII</td>
+      <td class="azul"></td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+    </tr>
+    <tr>
+      <td>VIII</td>
+      <td class="amarelo"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+      <td class="vermelho"></td>
+    </tr>
+  </tbody>
+</table>-->

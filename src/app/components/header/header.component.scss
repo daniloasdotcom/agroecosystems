@@ -5,48 +5,145 @@ header {
   right: 0;
   background-color: #2e7d32;
   color: white;
-  padding: 20px 30px;
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex; /* Header como um flex container */
+  align-items: center; /* Alinha itens verticalmente ao centro */
 
-  h1 {
-    margin: 0 0 10px 0;
-    font-size: clamp(1.4rem, 5vw, 2.2rem); // Ajustável para telas pequenas e grandes
-  }
+  /* Estilos para telas grandes (desktop) */
+  @media (min-width: 769px) {
+    flex-direction: row; /* Itens em linha no desktop */
+    justify-content: space-between; /* Espaço entre título/busca e nav */
+    height: 70px; /* Altura fixa para o header */
+    padding: 0 30px; /* Padding horizontal para desktop */
 
-  @media (max-width: 600px) {
-    padding: 12px 16px;
-  }
-}
+    /* Garante que .header-top não afete o layout flex no desktop */
+    .header-top {
+      display: contents; /* Seus filhos (h1, button) se comportam como irmãos do app-busca e nav */
+    }
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
+    h1 {
+      margin: 0; /* Remove margens extras */
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+    }
 
-  a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    /* Componente app-busca - Ajuste de ordem e visibilidade se necessário */
+    app-busca {
+      margin-left: auto; /* Empurra a busca para a direita, entre o h1 e nav */
+      margin-right: 20px; /* Espaçamento da busca para o menu */
+      width: auto; /* A busca ocupa seu espaço natural */
+    }
 
-    &:hover {
-      text-decoration: underline;
+    /* Navegação em desktop */
+    nav {
+      display: flex; /* Garante visibilidade da nav */
+      flex-direction: row; /* Links em linha */
+      gap: 30px;
+      position: static; /* Remove posicionamento absoluto em desktop */
+      height: auto;
+      overflow: visible;
+      background-color: transparent; /* Fundo transparente */
+      padding: 0;
+      box-shadow: none;
+      text-align: left;
+    }
+
+    /* Esconde o botão hambúrguer em desktop */
+    .hamburger-menu {
+      display: none;
     }
   }
 
-  @media (max-width: 600px) {
-    flex-direction: column;
-    gap: 10px; // reduz o espaçamento vertical entre links
+  /* Estilos para telas pequenas (mobile) */
+  @media (max-width: 768px) {
+    flex-direction: column; /* Itens empilhados */
+    padding: 10px 15px; /* Padding reduzido para mobile */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    height: auto; /* Altura automática */
 
-    a {
-      margin: 0; // mantém os links compactos
+    /* Container para o título e o botão hambúrguer */
+    .header-top {
+      display: flex;
+      justify-content: space-between; /* Título e hambúrguer nas extremidades */
+      align-items: center;
+      width: 100%; /* Ocupa toda a largura do header */
+      margin-bottom: 5px; /* Espaço entre esta linha e a busca */
+    }
+
+    h1 {
+      margin: 0; /* Remove margens padrão */
+      font-size: clamp(1.6rem, 6vw, 2.4rem);
+    }
+
+    /* Componente app-busca em mobile - AGORA CENTRALIZADO */
+    app-busca {
+      width: 100%; /* Continua ocupando 100% da largura do header */
+      margin-bottom: 10px; /* Espaço abaixo da busca */
+      display: flex; /* Torna o app-busca um flex container */
+      justify-content: center; /* Centraliza o conteúdo dentro de app-busca */
+    }
+
+    /* Navegação em mobile (escondida por padrão) */
+    nav {
+      flex-direction: column; /* Links em coluna */
+      gap: 15px; /* Espaçamento vertical entre links */
+      width: 100%;
+      height: 0; /* Menu fechado (altura zero) */
+      overflow: hidden; /* Esconde o conteúdo */
+      background-color: #2e7d32; /* Fundo para o menu expandido */
+      padding: 0;
+      position: absolute; /* Posiciona o menu abaixo do header-top */
+      top: 60px; /* Ajuste este valor se a altura do seu .header-top for diferente */
+      left: 0;
+      right: 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      z-index: 999; /* Abaixo do hambúrguer, mas acima do conteúdo */
+      transition: all 0.3s ease-in-out; /* Transição suave para abertura/fechamento */
+
+      /* Quando a classe 'menu-open' é adicionada via Angular/JS */
+      &.menu-open {
+        height: auto; /* Aumenta a altura para mostrar o menu */
+        padding: 20px 0; /* Adiciona padding quando aberto */
+      }
+
+      a {
+        margin: 0;
+        padding: 10px 0; /* Padding interno para cada link no menu */
+        width: 100%; /* Links ocupam a largura total para clique */
+        display: block; /* Para que o padding e width funcionem nos links */
+      }
+    }
+
+    /* Estilos para o botão do menu hambúrguer */
+    .hamburger-menu {
+      display: block; /* Mostra o hambúrguer em telas pequenas */
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      z-index: 1001; /* Garante que fique acima da nav expandida */
+
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: 0.4s;
+      }
     }
   }
 }
 
+/* Estilos para os links de navegação (fora do @media para serem globais e depois sobrescritos) */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

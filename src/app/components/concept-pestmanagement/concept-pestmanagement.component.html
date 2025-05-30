@@ -1,8 +1,195 @@
 <div class="explanation">
   <p>
-    Manejo ecológico de pragas e doenças trata-se de um dos aspectos centrais que controem o manejo ecológico em agroecossistemas. Nesta abordagem, o foco é a maximização de processos ecológicos a partir da promoção de biodiversidade acima e abaixo do solo, com ênfase no desenho e manejo do agroecossistema.
+    A promoção da biodiversidade nos agroecossistemas — por meio de práticas como rotação de culturas, consórcios, uso de plantas de cobertura e conservação da vegetação nativa — favorece uma série de processos ecológicos que atuam diretamente no controle natural de pragas e doenças. Esses processos têm como base a ocupação de múltiplos nichos ecológicos em diferentes níveis tróficos, como produtores, herbívoros, predadores, parasitóides e decompositores. Essa complexidade biológica permite a formação de redes alimentares estáveis, que regulam de forma sustentável as populações de organismos potencialmente danosos.
   </p>
 </div>
-    <p>
-    </p>
-    <img ngSrc="./assets/biodiversidade_pragas.png" width="445" height="323" class="responsive-img" priority/>
+<p>
+</p>
+<img ngSrc="./assets/biodiversidade_pragas.png" width="836" height="552" class="responsive-img" priority />
+
+<div class="curiosity-box">
+  <h4>Importante ⚖️</h4>
+  <h3>Quais processos ecológicos importantes para o manejo de pragas e doenças são promovidos pela diversificação em agroecossistemas?</h3>
+  <div class="subsection">
+  <button (click)="toggleSection('controleBiologico')">Controle Biológico Natural 🐞</button>
+  <div *ngIf="expandedSections['controleBiologico']">
+    <ul>
+      <li>Promoção de inimigos naturais: predadores, parasitóides e entomopatógenos</li>
+      <li>Conservação de habitats para joaninhas, aranhas, aves e vespas parasitas</li>
+      <li>Redução da necessidade de pesticidas sintéticos</li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('competicao')">Competição Microbiana 🌱</button>
+    <div *ngIf="expandedSections['competicao']">
+      <ul>
+        <li>Microrganismos benéficos competem com patógenos por espaço e nutrientes</li>
+        <li>Colonização de raízes por microrganismos protetores</li>
+        <li>Supressão natural de doenças do solo</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('alelopatia')">Alelopatia e Plantas Repelentes 🌿</button>
+    <div *ngIf="expandedSections['alelopatia']">
+      <ul>
+        <li>Uso de plantas que liberam compostos bioativos (ex: tagetes, neem)</li>
+        <li>Redução de insetos-praga e supressão de nematoides</li>
+        <li>Alternativa natural ao controle químico</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('diversidade')">Diversificação Espacial e Temporal 🌾</button>
+    <div *ngIf="expandedSections['diversidade']">
+      <ul>
+        <li>Policultivos, rotação e consórcios para quebrar ciclos de pragas</li>
+        <li>Variedade genética aumenta a resiliência do agroecossistema</li>
+        <li>Ambientes heterogêneos dificultam a adaptação de pragas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cadeias')">Cadeias Tróficas e Regulação Populacional 🐛</button>
+    <div *ngIf="expandedSections['cadeias']">
+      <ul>
+        <li>Presença de níveis tróficos múltiplos promove equilíbrio ecológico</li>
+        <li>Predadores e parasitoides controlam populações de pragas</li>
+        <li>Redução de explosões populacionais desequilibradas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('solo')">Atividade Microbiana no Solo 🦠</button>
+    <div *ngIf="expandedSections['solo']">
+      <ul>
+        <li>Solos vivos promovem antagonismo contra patógenos</li>
+        <li>Fungos e bactérias benéficos induzem resistência sistêmica</li>
+        <li>Melhora da saúde geral da planta e redução de doenças radiculares</li>
+      </ul>
+    </div>
+  </div>
+  <p>
+  <br>
+  A presença ativa de inimigos naturais, a competição microbiana no solo, a ação de compostos alelopáticos liberados por plantas, a heterogeneidade ambiental promovida pela diversidade espacial e temporal, e a elevada atividade biológica do solo compõem um conjunto de mecanismos que tornam o agroecossistema mais resiliente e menos dependente de insumos externos, como agrotóxicos.</p>
+</div>
+<div class="explanation">
+  <p>
+    <b>O objetivo central do manejo ecológico é claro:</b> <br>Estruturar o agroecossistema de modo a promover a biodiversidade e, com isso, favorecer a ocupação de múltiplos nichos por organismos benéficos. Isso resulta em um equilíbrio funcional entre os diversos níveis tróficos, os quais desempenham papéis fundamentais no controle natural de pragas e doenças.
+  </p>
+</div>
+<div class="explanation">
+  <p>
+    Como vimos, a promoção da biodiversidade é um dos elementos-chave do manejo ecológico de pragas e doenças. Essa estratégia envolve práticas como a diversificação de cultivos, o uso de plantas de cobertura e a integração de diferentes espécies no agroecossistema. Ao favorecer a presença de múltiplos organismos benéficos em diferentes níveis tróficos, essas práticas aumentam a complexidade ecológica e tornam o sistema agrícola mais resiliente a ataques de pragas e à incidência de doenças. Além disso, criam ambientes mais atrativos e funcionais para os inimigos naturais das pragas, reduzindo a dependência de agrotóxicos e fortalecendo o controle biológico natural.
+  </p>
+
+  <h3>Quais práticas, então, podem ser utilizadas para promover a biodiversidade em agroecossistemas?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('origem')">Diversificação de Cultivos 🌿</button>
+    <div *ngIf="expandedSections['origem']">
+      <ul>
+        <li>Implantação de policultivos e consórcios entre espécies vegetais com funções complementares</li>
+        <li>Utilização de variedades genéticas diversas ao longo do tempo e do espaço</li>
+        <li>Integração de cultivos alimentares, forrageiros, medicinais, aromáticos e plantas atrativas para polinizadores e inimigos naturais</li>
+        <li>Alternância entre culturas para quebrar ciclos de pragas e doenças</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('componentes')">Cultivo de Plantas de Cobertura 🌱</button>
+    <div *ngIf="expandedSections['componentes']">
+      <p>
+        O uso de plantas de cobertura — tanto no verão quanto no inverno — contribui para o aumento da biodiversidade funcional no solo e na parte aérea. Elas atraem inimigos naturais das pragas, suprimem plantas daninhas, protegem o solo contra erosão, melhoram a estrutura e fertilidade do solo e fornecem abrigo e recursos alimentares para insetos benéficos. Espécies como crotalária, aveia, nabo-forrageiro e mucuna são amplamente utilizadas com esses propósitos.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('vegetacao')">Conservação da Vegetação Nativa 🌳</button>
+    <div *ngIf="expandedSections['vegetacao']">
+      <ul>
+        <li>Manutenção de fragmentos de mata nativa e corredores ecológicos nas bordas das áreas cultivadas</li>
+        <li>Preservação de matas ciliares e nascentes como abrigo para predadores naturais</li>
+        <li>Integração de espécies nativas perenes ao sistema agrícola (agroflorestas)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('habitats')">Criação de Habitats para Inimigos Naturais 🐞</button>
+    <div *ngIf="expandedSections['habitats']">
+      <ul>
+        <li>Instalação de cercas vivas, sebes floridas e refúgios artificiais (como hotéis de insetos)</li>
+        <li>Plantio de flores nectaríferas e plantas aromáticas para atrair polinizadores e parasitoides</li>
+        <li>Evitar o uso de defensivos que eliminam predadores e polinizadores benéficos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('adubacaoVerde')">Adubação Verde e Integração com Leguminosas 🌾</button>
+    <div *ngIf="expandedSections['adubacaoVerde']">
+      <ul>
+        <li>Uso de leguminosas como feijão-guandu, mucuna e tremoço para fixação biológica de nitrogênio</li>
+        <li>Incremento de matéria orgânica e aumento da atividade microbiológica do solo</li>
+        <li>Contribuição para a saúde do solo, tornando-o menos favorável a patógenos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('paisagem')">Planejamento da Paisagem Agroecológica 🗺️</button>
+    <div *ngIf="expandedSections['paisagem']">
+      <ul>
+        <li>Distribuição estratégica de áreas de cultivo, reservas e zonas de refúgio para controle biológico</li>
+        <li>Design de mosaicos agrícolas com alta diversidade estrutural e funcional</li>
+        <li>Minimização de monoculturas extensas para evitar desequilíbrios ecológicos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('capacitacao')">Capacitação e Monitoramento Participativo 👩‍🌾</button>
+    <div *ngIf="expandedSections['capacitacao']">
+      <ul>
+        <li>Formação de agricultores e técnicos em identificação de inimigos naturais e boas práticas agroecológicas</li>
+        <li>Uso de armadilhas e cadernos de campo para monitoramento de pragas e predadores</li>
+        <li>Adoção de decisões baseadas no conhecimento ecológico local</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('controleTrofico')">Controle Top-Down vs Bottom-Up 🔄</button>
+    <div *ngIf="expandedSections['controleTrofico']">
+      <p>
+        Em ecossistemas — incluindo os agroecossistemas — o equilíbrio das populações de organismos pode ser regulado de duas formas principais:
+      </p>
+      <ul>
+        <li><strong>Controle Top-Down (de cima para baixo):</strong> ocorre quando predadores ou inimigos naturais regulam as populações de presas ou pragas. Exemplo: aves insetívoras controlando lagartas em cultivos.</li>
+        <li><strong>Controle Bottom-Up (de baixo para cima):</strong> acontece quando a disponibilidade de recursos básicos (como água, nutrientes e luz) influencia o crescimento das plantas e, consequentemente, a cadeia alimentar acima delas.</li>
+      </ul>
+      <p>
+        Em agroecossistemas bem planejados, ambos os controles atuam em conjunto. Promover o equilíbrio entre esses dois mecanismos torna o sistema mais estável, produtivo e menos dependente de insumos externos.
+      </p>
+      <p><strong>Exemplos práticos:</strong></p>
+      <ul>
+        <li>Plantio de flores aromáticas atrai parasitoides (controle top-down) que reduzem pulgões em hortaliças.</li>
+        <li>Uso de adubação verde e matéria orgânica melhora o solo (controle bottom-up), fortalecendo as plantas e tornando-as menos suscetíveis a doenças.</li>
+        <li>Ambientes biodiversos garantem múltiplos predadores atuando em diferentes fases das pragas, combinando estratégias top-down e bottom-up.</li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
+
+

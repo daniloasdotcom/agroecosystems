@@ -1,0 +1,51 @@
+<div class="explanation">
+  <h3>Ciclagem de Nutrientes</h3>
+  <p>
+    A ciclagem de nutrientes é o processo pelo qual os elementos essenciais à vida — como nitrogênio, fósforo e potássio — circulam entre o solo, os organismos e o ambiente. Em agroecossistemas, manter esse ciclo ativo e equilibrado é fundamental para garantir a fertilidade do solo e a produtividade das culturas, sem depender excessivamente de insumos externos.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Essencial 🌍</h4>
+  <h3>Como estimular a ciclagem de nutrientes no campo?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('adubacao')">Adubação Verde 🌱</button>
+    <div *ngIf="expandedSections['adubacao']">
+      <ul>
+        <li>Uso de plantas como mucuna, feijão-de-porco e crotalária para incorporar matéria orgânica ao solo.</li>
+        <li>Essas plantas fixam nitrogênio e reciclam nutrientes de camadas mais profundas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('decomposicao')">Atividade de Decompositores 🐛🦠</button>
+    <div *ngIf="expandedSections['decomposicao']">
+      <ul>
+        <li>Fungos, bactérias e minhocas transformam resíduos orgânicos em nutrientes disponíveis para as plantas.</li>
+        <li>Ambientes com alta matéria orgânica e umidade favorecem esses organismos.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cobertura')">Cobertura Morta e Compostagem ♻️</button>
+    <div *ngIf="expandedSections['cobertura']">
+      <ul>
+        <li>A cobertura morta protege o solo, reduz perdas por erosão e estimula a atividade microbiana.</li>
+        <li>Compostagem transforma resíduos agrícolas em fertilizante natural rico em nutrientes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('integracao')">Integração Solo-Planta-Microrganismos 🧬</button>
+    <div *ngIf="expandedSections['integracao']">
+      <ul>
+        <li>Microrganismos simbióticos, como micorrizas e rizóbios, aumentam a absorção de nutrientes.</li>
+        <li>Práticas como o plantio direto e a não remoção da palhada favorecem essa integração.</li>
+      </ul>
+    </div>
+  </div>
+</div>

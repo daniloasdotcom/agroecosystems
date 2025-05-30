@@ -1,18 +1,26 @@
-<header>
+<!---<header>
   <h1>AgroEcoSystem</h1>
   <app-busca></app-busca>
 
   <nav>
     <a href="#intro">Início</a>
   </nav>
-</header>>
-<!---<header>
-  <h1>AgroEcoSystem</h1>
+</header>--->
+
+<header>
+  <div class="header-top">
+    <h1>AgroEcoSistemas</h1>
+    <button class="hamburger-menu" (click)="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
   <app-busca></app-busca>
 
-  <nav>
+  <nav [class.menu-open]="isMenuOpen">
     <a href="./home">Início</a>
-    <a href="./manejo">Práticas de Manejo</a>
+    <a href="./manejo">Manejo</a>
+    <a href="./componentes">Componentes</a>
   </nav>
-</header>-->
-
+</header>

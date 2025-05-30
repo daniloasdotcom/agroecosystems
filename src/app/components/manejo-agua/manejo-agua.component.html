@@ -1,0 +1,330 @@
+<div class="explanation">
+  <h3>Manejo da Água em Agroecossistemas 💧</h3>
+  <p>
+    A água é um recurso fundamental e um fator limitante crítico para a produção agrícola e para a sustentabilidade dos agroecossistemas. Sua gestão eficiente é indispensável para otimizar a produtividade das culturas, manter a saúde do solo e dos ecossistemas associados, e garantir a resiliência do sistema frente às variações climáticas. No contexto agroecológico, o manejo da água busca mimetizar e otimizar os ciclos hidrológicos naturais, minimizando perdas e promovendo a sua conservação.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Ciclo da Água no Agroecossistema 🌧️</h4>
+  <h3>Fontes e Armazenamento de Água</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('entradaAgua')">Entrada de Água: Chuva e Irrigação 🔄</button>
+    <div *ngIf="expandedSections['entradaAgua']">
+      <p>A entrada de água em agroecossistemas ocorre primordialmente por duas vias:</p>
+      <ul>
+        <li>
+          <strong>Precipitação Pluviométrica (Chuva):</strong> É a principal fonte de água para a maioria dos agroecossistemas de sequeiro. A eficácia da chuva como fonte de água depende não apenas do volume total, mas também da sua distribuição temporal, intensidade e da capacidade de infiltração do solo. Chuvas intensas em solos descobertos ou compactados podem resultar em escoamento superficial significativo, limitando a recarga do perfil do solo e causando erosão.
+        </li>
+        <li>
+          <strong>Irrigação:</strong> Representa a aplicação suplementar de água para atender às demandas hídricas das culturas que não são supridas adequadamente pela precipitação. A escolha do método de irrigação (e.g., aspersão, gotejamento, sulcos) e a eficiência de uso da água são cruciais para a sustentabilidade hídrica. Em agroecossistemas, a irrigação é frequentemente planejada para complementar a água disponível no solo e otimizar a produtividade, com foco em técnicas que minimizem o desperdício e o impacto ambiental. Fontes de água para irrigação podem incluir rios, lagos, águas subterrâneas (poços) ou reservatórios.
+        </li>
+      </ul>
+      <p>A interação entre precipitação e irrigação define o regime hídrico total disponível para as culturas no agroecossistema.</p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('armazenamentoAgua')">Armazenamento de Água em Agroecossistemas 貯</button>
+    <div *ngIf="expandedSections['armazenamentoAgua']">
+      <p>Após a entrada, a água é armazenada nos agroecossistemas em diferentes compartimentos, influenciando diretamente sua disponibilidade para as plantas e outros organismos:</p>
+      <ul>
+        <li>
+          <strong>Água no Solo (Umidade do Solo):</strong> Este é o principal reservatório de água acessível às plantas no curto e médio prazo. A capacidade de armazenamento de água no solo é determinada por sua textura (proporção de areia, silte e argila), estrutura (arranjo de partículas e poros) e teor de matéria orgânica. Solos bem estruturados e com alto teor de matéria orgânica apresentam maior capacidade de retenção de água disponível para as culturas, reduzindo a necessidade de irrigação frequente e a vulnerabilidade à seca.
+        </li>
+        <li>
+          <strong>Água em Superfície (Corpos D'água e Reservatórios):</strong> Lagos, açudes, represas e outras acumulações superficiais são importantes para o armazenamento de água para irrigação, consumo humano e animal, e para a manutenção da biodiversidade aquática. O manejo desses corpos d'água em agroecossistemas inclui práticas para minimizar a evaporação, controlar a sedimentação e evitar a contaminação por escoamento agrícola.
+        </li>
+        <li>
+          <strong>Água Subsuperficial e Subterrânea (Aquíferos):</strong> Parte da água que se infiltra no solo pode percolar além da zona radicular, recarregando aquíferos e fluxos subsuperficiais. Esta água pode ser acessada por poços para irrigação ou outras finalidades. A qualidade e a quantidade da água subterrânea são diretamente influenciadas pelas práticas de manejo do solo na superfície, incluindo o uso de fertilizantes e defensivos.
+        </li>
+        <li>
+          <strong>Água Vegetal (Biomassa das Plantas):</strong> Embora em menor escala, as plantas e a biomassa presente no agroecossistema armazenam água. A cobertura vegetal, especialmente a vegetação perene e a palhada, desempenha um papel crucial na interceptação da chuva, redução do escoamento superficial, diminuição da evaporação direta do solo e aumento da infiltração, contribuindo para a eficiência do uso da água em todo o sistema.
+        </li>
+      </ul>
+      <p>A interconexão desses compartimentos de armazenamento e a forma como são manejados são cruciais para a resiliência hídrica e produtividade sustentável do agroecossistema.</p>
+    </div>
+  </div>
+</div>
+
+<div class="explanation">
+  <h3>Técnicas de Conservação da Água em Agroecossistemas 💧</h3>
+  <p>
+    A conservação da água em agroecossistemas transcende a mera economia do recurso; ela se configura como uma estratégia integrada que visa otimizar a eficiência do uso da água, minimizar perdas por escoamento, evaporação e percolação profunda, e fortalecer a resiliência do sistema produtivo frente a eventos hídricos extremos. Essas técnicas são fundamentadas na compreensão dos processos hidrológicos e edáficos, buscando mimetizar e aprimorar as funções naturais do ecossistema.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Práticas para Otimização Hídrica 📈</h4>
+  <h3>Estratégias de Conservação e Manejo da Água</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('manejoSoloAgua')">Manejo do Solo para Conservação da Água 👩‍🌾</button>
+    <div *ngIf="expandedSections['manejoSoloAgua']">
+      <p>A condição do solo é um dos fatores mais determinantes na eficiência do uso da água. Práticas de manejo conservacionista do solo são intrinsecamente ligadas à conservação hídrica:</p>
+      <ul>
+        <li>
+          <strong>Plantio Direto (SPD):</strong> A ausência de revolvimento do solo e a manutenção de uma cobertura permanente (palhada) reduzem drasticamente o impacto direto das gotas de chuva, minimizando a desagregação das partículas e a formação de crostas superficiais. Isso **aumenta significativamente a taxa de infiltração da água** no solo, reduz o escoamento superficial e, consequentemente, a erosão. A palhada atua como um mulching natural, **diminuindo a evaporação direta da superfície do solo** e mantendo a umidade por mais tempo.
+        </li>
+        <li>
+          <strong>Adição de Matéria Orgânica:</strong> O incremento do teor de matéria orgânica no solo melhora a estrutura, aumentando a formação de agregados e a porosidade total. Isso eleva a **capacidade de retenção de água disponível** para as plantas e aprimora a drenagem interna, prevenindo o encharcamento. A matéria orgânica age como uma "esponja", armazenando água em suas estruturas.
+        </li>
+        <li>
+          <strong>Cultivo em Nível/Contorno e Terraceamento:</strong> Em áreas declivosas, o plantio seguindo as curvas de nível do terreno e a construção de terraços ou taipas rompem o fluxo da enxurrada. Essas estruturas **reduzem a velocidade do escoamento superficial**, promovendo maior tempo para a infiltração da água e minimizando perdas por erosão laminar e em sulcos.
+        </li>
+        <li>
+          <strong>Subsolagem/Escarificação (quando necessária):</strong> Em solos compactados, a descompactação pontual ou em faixas pode melhorar a macroporosidade, facilitando a infiltração de água e o desenvolvimento radicular profundo, que acessa reservas hídricas mais profundas. No entanto, deve ser feita com cautela para não desestruturar o solo.
+        </li>
+        <li>
+          <strong>Cobertura de Solo (Mulching):</strong> Além da palhada do SPD, outras formas de mulching (e.g., resíduos de culturas, cascas, plásticos biodegradáveis) cobrem a superfície do solo, **reduzindo a evaporação**, controlando a temperatura do solo e suprimindo plantas daninhas, que competem por água e nutrientes.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('manejoIrrigacao')">Manejo Eficiente da Irrigação 🚿</button>
+    <div *ngIf="expandedSections['manejoIrrigacao']">
+      <p>Quando a precipitação é insuficiente, a irrigação torna-se essencial. A eficiência do uso da água na irrigação é maximizada através de:</p>
+      <ul>
+        <li>
+          <strong>Irrigação de Precisão:</strong> Emprega tecnologias como sensores de umidade do solo, estações meteorológicas e sistemas de sensoriamento remoto (drones, satélites) para determinar a **necessidade hídrica exata das culturas** em diferentes porções da área cultivada. Isso permite aplicar a quantidade de água precisa, no momento correto e no local adequado, **evitando o desperdício** por sub ou superirrigação. Métodos como gotejamento e microaspersão são intrinsecamente mais eficientes.
+        </li>
+        <li>
+          <strong>Programação da Irrigação:</strong> Baseia-se no monitoramento do balanço hídrico do solo (evapotranspiração, precipitação, umidade do solo) para definir o momento e a lâmina de água a ser aplicada. Isso evita o estresse hídrico das plantas e a lixiviação de nutrientes, otimizando o uso da água e insumos.
+        </li>
+        <li>
+          <strong>Seleção de Cultivares Tolerantes à Seca:</strong> O uso de variedades de plantas que apresentam maior eficiência no uso da água ou maior tolerância a períodos de déficit hídrico pode reduzir a demanda por irrigação.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('manejoPaisagem')">Manejo da Água na Paisagem 🏞️</button>
+    <div *ngIf="expandedSections['manejoPaisagem']">
+      <p>A conservação da água em agroecossistemas também envolve estratégias em escala de paisagem, promovendo a integração entre áreas produtivas e de conservação:</p>
+      <ul>
+        <li>
+          <strong>Proteção e Recuperação de Nascentes e Matas Ciliares:</strong> A vegetação nativa ao redor de nascentes e cursos d'água (matas ciliares) atua como um filtro natural, prevenindo a erosão das margens, a sedimentação e a contaminação da água. Além disso, contribuem para a **recarga de aquíferos** e a manutenção do fluxo hídrico em períodos de estiagem.
+        </li>
+        <li>
+          <strong>Construção de Barraginhas e Bacias de Captação:</strong> Estruturas de pequeno porte que coletam e armazenam o excedente de água da chuva em áreas de baixo escoamento ou em microbacias. Essas barraginhas promovem a **infiltração de água no solo**, aumentando a umidade do perfil e a recarga de lençóis freáticos, além de reduzir o escoamento superficial e a erosão.
+        </li>
+        <li>
+          <strong>Sistemas Agroflorestais (SAFs):</strong> A integração de árvores, arbustos e culturas anuais/perenes em SAFs contribui significativamente para a conservação da água. As árvores promovem a **melhora da estrutura do solo** (via raízes e matéria orgânica), aumentam a infiltração, **reduzem a evaporação** (sombreamento) e podem acessar água de camadas mais profundas, otimizando o ciclo hidrológico no sistema.
+        </li>
+        <li>
+          <strong>Reuso de Água Tratada:</strong> Em contextos específicos, o reuso de efluentes tratados (e.g., de esgoto doméstico ou efluentes da própria atividade agrícola, após tratamento adequado) para irrigação pode ser uma estratégia válida para reduzir a demanda por fontes de água doce.
+        </li>
+      </ul>
+      <p>A implementação dessas técnicas de forma integrada e adaptada às características locais do agroecossistema é fundamental para garantir a sustentabilidade hídrica e a resiliência produtiva a longo prazo.</p>
+    </div>
+  </div>
+</div>
+<div class="explanation">
+  <h3>Manejo da Água em Agroecossistemas de Terras Secas (Áridas e Semiáridas) 🌵</h3>
+  <p>
+    Em regiões áridas e semiáridas, onde a escassez hídrica é uma constante, o manejo da água assume uma importância ainda maior. A sobrevivência e a produtividade dos agroecossistemas dependem da implementação de estratégias que maximizem a captação, o armazenamento e o uso eficiente da água disponível, minimizando perdas e garantindo a resiliência frente a longos períodos de seca. 
+  </p>
+</div>
+
+<div class="explanation">
+  <p>
+    Neste sentido, agroecossistemas de terras secas adaptam-se às condições adversas de disponibilidade hídrica, utilizando práticas que favorecem a conservação e uso racioncal da água, passando pelas técnicas de capitação e armazanamento da água da chuva, reuso de águas residuais, uso de técnicas de irrigação eficientes e a escolha de culturas adaptadas às condições locais - sobretudo quando em sistemas de sequeiro. Essas práticas são fundamentais para garantir a segurança alimentar, a sustentabilidade ambiental e a viabilidade econômica das comunidades que dependem desses agroecossistemas.
+  </p>
+</div>
+
+<div class="explanation">
+  <h3>Manejo da Água em Agroecossistemas de Terras Secas (Áridas e Semiáridas) 🌵</h3>
+  <p>
+    Em regiões áridas e semiáridas, onde a escassez hídrica é uma constante, o manejo da água assume uma importância ainda maior. A sobrevivência e a produtividade dos agroecossistemas dependem da implementação de estratégias que maximizem a captação, o armazenamento e o uso eficiente da água disponível, minimizando perdas e garantindo a resiliência frente a longos períodos de seca. O reuso da água, nesse contexto, torna-se uma prática fundamental.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Reuso da Água: Essencial em Terras Secas ♻️</h4>
+  <h3>Importância e Estratégias no Semiárido Brasileiro</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('barragemSubterranea')">1. Barragem Subterrânea 🚧</button>
+    <div *ngIf="expandedSections['barragemSubterranea']">
+      <p>
+        A barragem subterrânea é uma técnica de captação e armazenamento de água que consiste na construção de uma barreira impermeável (muro de alvenaria ou lona plástica) no subsolo, em leitos de riachos intermitentes ou áreas de recarga, para interceptar e reter a água que se infiltra no solo durante o período chuvoso. Essa barreira eleva o nível do lençol freático local, criando um reservatório de água subterrâneo que pode ser acessado por poços rasos ou que mantém a umidade do solo por mais tempo na área a montante da barragem. É especialmente útil para a produção de culturas anuais, hortaliças e frutíferas, e para o abastecimento animal.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cisternaCalcadao')">2. Cisterna Calçadão 💦</button>
+    <div *ngIf="expandedSections['cisternaCalcadao']">
+      <p>
+        A cisterna calçadão é um sistema de captação de água da chuva que integra uma área de captação pavimentada (o "calçadão", geralmente com cerca de 200m²) a um reservatório subterrâneo ou semissubterrâneo de grande volume (comum 52 mil litros). A água da chuva que escoa sobre o calçadão é direcionada por canais para a cisterna, onde é armazenada para múltiplos usos, principalmente para a produção de alimentos em quintais produtivos e o abastecimento animal, contribuindo para a segurança alimentar e nutricional das famílias rurais. A grande área de captação permite o enchimento do reservatório mesmo em anos de chuvas abaixo da média.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('tanquePedra')">3. Tanque de Pedra ou Caldeirão 🪨</button>
+    <div *ngIf="expandedSections['tanquePedra']">
+      <p>
+        Esta técnica aproveita formações rochosas naturais, como fendas largas, barrocas ou buracos em lajedos de granito, que funcionam como receptores de água da chuva. Para aumentar a capacidade de armazenamento, paredes de alvenaria podem ser erguidas ao redor ou na parte mais baixa dessas depressões naturais. O volume de água armazenado varia conforme o tamanho e a profundidade do caldeirão. É uma tecnologia de uso comunitário, com a água sendo utilizada para o consumo de animais, pequenas irrigações e afazeres domésticos.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('bombaAguaPopular')">4. Bomba D'Água Popular (BAP) ⚙️</button>
+    <div *ngIf="expandedSections['bombaAguaPopular']">
+      <p>
+        A Bomba D'Água Popular (BAP) é um equipamento manual de baixo custo e fácil manuseio, projetado para extrair água de poços tubulares (frequentemente desativados) ou cisternas. Ela consiste em um sistema de alavanca e roda volante que, quando girada, puxa grandes volumes de água com pouco esforço físico, mesmo de profundidades consideráveis (até 80 metros). É uma tecnologia de uso comunitário que democratiza o acesso à água subterrânea para a produção de alimentos, dessedentação animal e uso doméstico em comunidades rurais do semiárido.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('barreiroTrincheira')">5. Barreiro-Trincheira 📏</button>
+    <div *ngIf="expandedSections['barreiroTrincheira']">
+      <p>
+        O barreiro-trincheira é um reservatório de água pluvial escavado no solo, caracterizado por seu formato longo, estreito e profundo, assemelhando-se a uma trincheira. Essa geometria minimiza a superfície de contato da água com o ar e o sol, resultando em uma menor taxa de evaporação em comparação com açudes convencionais. Com capacidade para armazenar centenas de milhares de litros (ex: 500 mil litros), ele serve para o abastecimento de animais e permite a irrigação de pequenas áreas de cultivo mesmo durante períodos de estiagem, fortalecendo a resiliência produtiva.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('barraginha')">6. Barraginha 💧</button>
+    <div *ngIf="expandedSections['barraginha']">
+      <p>
+        As barraginhas são pequenas estruturas escavadas no solo, em formato de "meia-lua" ou semicircular, construídas em áreas de captação de enxurradas ou em grotas suaves. Seu principal objetivo é conter o escoamento superficial da água da chuva, **reduzindo a velocidade da enxurrada e promovendo sua infiltração no solo**. Elas contribuem para a recarga do lençol freático, aumentam a umidade do solo no entorno, previnem a erosão e o assoreamento de cursos d'água. As barraginhas são eficazes para aumentar a disponibilidade hídrica local para vegetação nativa, pastagens e pequenas culturas.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cisternaEnxurrada')">7. Cisterna-Enxurrada 🌊</button>
+    <div *ngIf="expandedSections['cisternaEnxurrada']">
+      <p>
+        A cisterna-enxurrada é uma tecnologia social projetada para captar a água do escoamento superficial de grandes áreas (como estradas, caminhos, ou terrenos com declividade), que de outra forma seria perdida. Essa água é direcionada para um sistema de decantação (com um ou dois tanques) para remoção de sedimentos e impurezas grosseiras, antes de ser armazenada em um reservatório de grande capacidade (tipicamente 52 mil litros). A água coletada é prioritariamente utilizada para irrigação de lavouras e abastecimento de animais, contribuindo para a resiliência produtiva da agricultura familiar.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cisternaTelhadao')">8. Cisterna-Telhadão 🏠</button>
+    <div *ngIf="expandedSections['cisternaTelhadao']">
+      <p>
+        A cisterna-telhadão, ou simplesmente cisterna de placas, é um reservatório cilíndrico, geralmente construído próximo à residência familiar, com capacidade padrão de 16 mil litros (ou outras capacidades). Ela capta a água da chuva diretamente dos telhados das casas, por meio de calhas e canos, armazenando-a para uso prioritário no consumo humano (beber e cozinhar). É uma tecnologia amplamente difundida no semiárido, essencial para garantir o acesso à água potável durante os longos períodos de estiagem, promovendo a segurança hídrica e melhorando a qualidade de vida das famílias.
+      </p>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('sistemaSARA')">Sistema SARA: Uma Abordagem Integrada ⚙️</button>
+    <div *ngIf="expandedSections['sistemaSARA']">
+      <p>
+        O <strong>Sistema de Água de Reúso Agrícola (SARA)</strong>, desenvolvido pelo Instituto Nacional do Semiárido (INSA), é um exemplo de abordagem integrada para o manejo da água em regiões secas. Ele consiste em:
+      </p>
+      <ul>
+        <li>
+          <strong>Tratamento Simplificado de Esgoto Doméstico:</strong> Utilização de tecnologias de baixo custo e fácil manutenção, como tanques sépticos e filtros biológicos, para tratar o esgoto doméstico.
+        </li>
+        <li>
+          <strong>Reuso da Água Tratada para Irrigação:</strong> A água tratada é utilizada para irrigar culturas não destinadas ao consumo humano direto, como forrageiras e algumas espécies de árvores.
+        </li>
+        <li>
+          <strong>Produção de Alimentos e Forragem:</strong> O sistema permite a produção de alimentos e forragem mesmo em períodos de seca, contribuindo para a segurança alimentar e a geração de renda.
+        </li>
+        <li>
+          <strong>Benefícios Ambientais:</strong> Redução da poluição de corpos d'água e da demanda por água potável.
+        </li>
+      </ul>
+      <p>
+        O Sistema SARA demonstra o potencial do reuso da água para promover a sustentabilidade dos agroecossistemas em terras secas, aliando produção agrícola, preservação ambiental e benefícios sociais.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="curiosity-box">
+  <h4>Reuso da Água: Essencial em Terras Secas ♻️</h4>
+  <h3>Importância e Estratégias no Semiárido Brasileiro</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('importanciaReuso')">Importância do Reuso da Água 💧</button>
+    <div *ngIf="expandedSections['importanciaReuso']">
+      <p>
+        O reuso da água, que consiste na utilização de água já utilizada para outros fins (doméstico, industrial, agrícola) após tratamento adequado, oferece múltiplos benefícios para agroecossistemas de terras secas:
+      </p>
+      <ul>
+        <li>
+          <strong>Redução da Dependência de Fontes Convencionais:</strong> Diminui a pressão sobre rios, lagos e aquíferos, que já são naturalmente escassos nessas regiões.
+        </li>
+        <li>
+          <strong>Disponibilidade Hídrica Aumentada:</strong> Fornece uma fonte adicional de água para irrigação, permitindo a produção agrícola mesmo em períodos de seca.
+        </li>
+        <li>
+          <strong>Redução do Descarte de Efluentes:</strong> Diminui a poluição de corpos d'água, desde que o tratamento seja feito corretamente.
+        </li>
+        <li>
+          <strong>Economia de Recursos:</strong> O tratamento da água para reuso pode ser mais econômico do que a captação e tratamento de água potável para irrigação.
+        </li>
+        <li>
+          <strong>Fertilização Adicional:</strong> A água de reuso, dependendo da sua origem, pode conter nutrientes que beneficiam as plantas, reduzindo a necessidade de fertilizantes sintéticos.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('estrategiasSemiArido')">Estratégias de Manejo da Água no Semiárido Brasileiro 🇧🇷</button>
+    <div *ngIf="expandedSections['estrategiasSemiArido']">
+      <p>
+        O semiárido brasileiro, caracterizado por longos períodos de seca e chuvas irregulares, tem desenvolvido diversas estratégias para o manejo sustentável da água:
+      </p>
+      <ul>
+        <li>
+          <strong>Captação e Armazenamento de Água da Chuva:</strong> Construção de cisternas para consumo humano e animal, e de barragens subterrâneas e barreiros para irrigação.
+        </li>
+        <li>
+          <strong>Irrigação de Baixo Custo e Alta Eficiência:</strong> Utilização de sistemas de gotejamento e microaspersão, que minimizam o desperdício de água.
+        </li>
+        <li>
+          <strong>Reuso de Águas Cinzas:</strong> Tratamento e reutilização da água proveniente de pias, chuveiros e máquinas de lavar para irrigação de culturas não destinadas ao consumo humano direto.
+        </li>
+        <li>
+          <strong>Seleção de Culturas Resilientes:</strong> Plantio de espécies adaptadas à seca, como palma forrageira, sorgo e algumas variedades de feijão e milho.
+        </li>
+        <li>
+          <strong>Manejo do Solo para Conservação da Água:</strong> Práticas como plantio direto, mulching e terraceamento, que aumentam a infiltração da água no solo e reduzem a evaporação.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('sistemaSARA')">Sistema SARA: Uma Abordagem Integrada ⚙️</button>
+    <div *ngIf="expandedSections['sistemaSARA']">
+      <p>
+        O <strong>Sistema de Água de Reúso Agrícola (SARA)</strong>, desenvolvido pelo Instituto Nacional do Semiárido (INSA), é um exemplo de abordagem integrada para o manejo da água em regiões secas. Ele consiste em:
+      </p>
+      <ul>
+        <li>
+          <strong>Tratamento Simplificado de Esgoto Doméstico:</strong> Utilização de tecnologias de baixo custo e fácil manutenção, como tanques sépticos e filtros biológicos, para tratar o esgoto doméstico.
+        </li>
+        <li>
+          <strong>Reuso da Água Tratada para Irrigação:</strong> A água tratada é utilizada para irrigar culturas não destinadas ao consumo humano direto, como forrageiras e algumas espécies de árvores.
+        </li>
+        <li>
+          <strong>Produção de Alimentos e Forragem:</strong> O sistema permite a produção de alimentos e forragem mesmo em períodos de seca, contribuindo para a segurança alimentar e a geração de renda.
+        </li>
+        <li>
+          <strong>Benefícios Ambientais:</strong> Redução da poluição de corpos d'água e da demanda por água potável.
+        </li>
+      </ul>
+      <p>
+        O Sistema SARA demonstra o potencial do reuso da água para promover a sustentabilidade dos agroecossistemas em terras secas, aliando produção agrícola, preservação ambiental e benefícios sociais.
+      </p>
+    </div>
+  </div>
+</div>

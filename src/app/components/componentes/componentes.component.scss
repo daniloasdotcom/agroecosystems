@@ -5,7 +5,7 @@ body {
 
 /* Centralização e estilo base */
 section {
-  padding: 20px 20px;
+  padding: 60px 20px;
   border-bottom: 1px solid #ccc;
   text-align: center;
   color: black;
@@ -38,6 +38,11 @@ ul {
   color: #000000;
 }
 
+/* Gradientes por seção */
+#luz {
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+  padding-top: 40px; // padrão para desktops
+}
 
 #manejodepragas {
   /*background: linear-gradient(135deg, #b7f8db, #50c878);*/
@@ -57,7 +62,7 @@ ul {
   background: white;
 }
 
-#manejodosolo {
+#nicho {
   background: linear-gradient(135deg, #b7f8db, #50c878)
 }
 

@@ -11,34 +11,9 @@
 
 </section>
 
-<section id="manejodepragas">
-  <h2>Manejo Ecológico de Pragas</h2>
-  <app-concept-pestmanagement></app-concept-pestmanagement>
-  <div class="subsection">
-    <button (click)="toggleSection('origem')">Diversificação de cultivos🌿</button>
-    <div *ngIf="expandedSections['origem']">
-      <ul>
-        <li>Policultivos e consórcios</li>
-        <li>Variedades múltiplas e genéticas no tempo e espaço</li>
-        <li>Integração de culturas alimentares, forrageiras, medicinais e atrativas</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="subsection">
-    <button (click)="toggleSection('componentes')">Cultivo de Plantas de Cobertura🌿
-</button>
-    <div *ngIf="expandedSections['componentes']">
-      <p>Cobertura verde no inverno e no verão para atrair inimigos naturais, melhorar solo e fornecer abrigo
-    </div>
-  </div>
-
-  <div class="subsection">
-    <button (click)="toggleSection('importancia')">Importância Atual</button>
-    <div *ngIf="expandedSections['importancia']">
-      <p>Diante das mudanças climáticas e demandas por sustentabilidade...</p>
-    </div>
-  </div>
+<section id="producaoprimaria">
+  <h2>Produção Primária</h2>
+  <app-producao-primaria></app-producao-primaria>
 </section>
 
 <section id="niveisorganizacao">
@@ -67,14 +42,25 @@
   <app-nicho></app-nicho>
 </section>
 
-<section id="producaoprimaria">
-  <h2>Produção Primária</h2>
-  <app-producao-primaria></app-producao-primaria>
-</section>
-
 <section id="estrategiark">
   <h2>Estratégia r e K</h2>
   <app-estrategiark></app-estrategiark>
 </section>
+
+<section id="niveltrofico">
+  <h2>Níveis Tróficos</h2>
+  <app-nivel-trofico></app-nivel-trofico>
+</section>
+
+<section id="relacoesecologicas">
+  <h2>Relações Ecológicas</h2>
+  <app-relacoes-ecologicas></app-relacoes-ecologicas>
+</section>
+
+<section id="ciclagemnutrientes">
+  <h2>Ciclagem de Nutrientes</h2>
+  <app-ciclagem-nutrientes></app-ciclagem-nutrientes>
+</section>
+
 </main>
 <app-footer></app-footer>

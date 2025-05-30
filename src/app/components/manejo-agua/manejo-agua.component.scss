@@ -9,7 +9,7 @@
   color: #333;
 }
 
-.explanation p {
+.explanation p, ul {
   margin: 0 0 10px;
   text-align: justify;
 }
@@ -79,4 +79,81 @@
 
 .curiosity-box p {
   margin: 0;
+}
+
+/* === Estrutura geral === */
+.comparison-wrapper {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 10px; /* pequena margem lateral */
+}
+
+.comparison-wrapper p {
+  color: black;
+  margin-bottom: 12px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+
+/* === Estilo da "tabela" === */
+.comparison-table {
+  display: table;
+  width: 100%;
+  border-spacing: 0 10px;
+  margin: 20px auto;
+  table-layout: fixed; /* força colunas a se ajustarem */
+}
+
+.comparison-header,
+.comparison-row {
+  display: table-row;
+}
+
+.comparison-header div,
+.comparison-row div {
+  display: table-cell;
+  padding: 12px 8px;
+  vertical-align: top;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+.comparison-header div:nth-child(1),
+.comparison-row div:nth-child(1) {
+  width: 25%;
+  font-weight: bold;
+  text-align: left;
+}
+
+.comparison-header div:nth-child(2),
+.comparison-row div:nth-child(2),
+.comparison-header div:nth-child(3),
+.comparison-row div:nth-child(3) {
+  width: 37.5%;
+  text-align: center;
+}
+
+.comparison-header div:last-child,
+.comparison-row div:last-child {
+  border-right: none;
+}
+
+.comparison-header {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+}
+
+.comparison-row {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.comparison-row:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }

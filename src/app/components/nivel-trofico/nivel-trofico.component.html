@@ -1,0 +1,105 @@
+<div class="explanation">
+  <h3>Níveis Tróficos</h3>
+  <p>
+    Os níveis tróficos representam as posições que os organismos ocupam em uma cadeia alimentar, de acordo com como obtêm energia e nutrientes. Cada nível está relacionado à fonte de alimento do organismo, formando uma sequência de transferência de energia no ecossistema.
+  </p>
+  <ul>
+    <li><strong>Produtores</strong> — Organismos autotróficos, como plantas e algas, que produzem seu próprio alimento via fotossíntese.</li>
+    <li><strong>Consumidores primários</strong> — Herbívoros que se alimentam diretamente dos produtores (ex.: gafanhotos, lagartas).</li>
+    <li><strong>Consumidores secundários</strong> — Predadores que se alimentam dos herbívoros (ex.: sapos, aves insetívoras).</li>
+    <li><strong>Consumidores terciários</strong> — Predadores de predadores (ex.: serpentes, gaviões).</li>
+    <li><strong>Decompositores</strong> — Fungos, bactérias e invertebrados que reciclam a matéria orgânica, devolvendo nutrientes ao solo.</li>
+  </ul>
+  <p>
+    Compreender os níveis tróficos ajuda a visualizar as relações ecológicas e a importância da biodiversidade funcional dentro dos agroecossistemas.
+  </p>
+</div>
+
+<div class="explanation">
+  <h3>Níveis Tróficos em Agroecossistemas</h3>
+  <p>
+    Em agroecossistemas, manter uma estrutura trófica equilibrada é essencial para garantir o controle natural de pragas, a ciclagem de nutrientes e a sustentabilidade do sistema. Veja como aplicar esse conceito no campo:
+  </p>
+
+  <div class="subsection">
+    <button (click)="toggleSection('exemploMilpa')">Exemplo Prático: Sistema Milpa 🌽🌱🎃</button>
+    <div *ngIf="expandedSections['exemploMilpa']">
+      <p>Assim como no conceito de nicho, o sistema milpa também expressa diferentes níveis tróficos interagindo:</p>
+      <ul>
+        <li><strong>Produtores:</strong> milho, feijão, abóbora — convertem energia solar em biomassa.</li>
+        <li><strong>Consumidores primários:</strong> lagartas, gafanhotos que atacam as folhas.</li>
+        <li><strong>Consumidores secundários:</strong> joaninhas, aranhas, vespas parasitas — predadores naturais de herbívoros.</li>
+        <li><strong>Decompositores:</strong> minhocas, fungos e bactérias do solo — reciclam resíduos vegetais e adubação verde.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('plantasAtrativas')">Cultivo de Plantas Atrativas para Predadores Naturais 🐞</button>
+    <div *ngIf="expandedSections['plantasAtrativas']">
+      <ul>
+        <li>Plantas com flores nectaríferas (como coentro, erva-doce, girassol) oferecem abrigo e alimento a consumidores secundários e terciários.</li>
+        <li>Esses inimigos naturais ajudam a controlar insetos-praga de forma eficaz e sustentável.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cadeiaAlimentar')">Planejamento de Cadeias Alimentares no Campo 🌾</button>
+    <div *ngIf="expandedSections['cadeiaAlimentar']">
+      <ul>
+        <li>Evitar monoculturas que simplificam os níveis tróficos e favorecem explosões de pragas.</li>
+        <li>Promover uma rede alimentar diversa, com presença de predadores, parasitóides e detritívoros.</li>
+        <li>Plantar espécies que favorecem múltiplos níveis tróficos em vez de apenas os produtores.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('decompositores')">Incorporação de Decompositores e Solo Vivo 🦠</button>
+    <div *ngIf="expandedSections['decompositores']">
+      <ul>
+        <li>Uso de composto orgânico, cobertura morta e adubação verde aumenta a atividade de fungos, bactérias e invertebrados benéficos.</li>
+        <li>Esses organismos reciclam nutrientes, ajudam na supressão de patógenos e aumentam a fertilidade natural.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('regulacaoBiologica')">Regulação Populacional por Níveis Tróficos 🔄</button>
+    <div *ngIf="expandedSections['regulacaoBiologica']">
+      <ul>
+        <li>A presença contínua de predadores e parasitóides evita desequilíbrios populacionais.</li>
+        <li>Ambientes com mais níveis tróficos são mais estáveis e resistentes a infestações.</li>
+        <li>Reduz a necessidade de pesticidas, fortalecendo o controle biológico natural.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="explanation">
+  <h3>Como os Níveis Tróficos se Relacionam com o Nicho Ecológico?</h3>
+  <p>
+    O <strong>nível trófico</strong> indica a posição de um organismo na cadeia alimentar, ou seja, como ele obtém energia (ex.: produtor, herbívoro, predador, decompositor).
+    Já o <strong>nicho ecológico</strong> descreve de forma mais ampla o “modo de vida” do organismo — o que inclui o seu nível trófico, mas também:
+  </p>
+  <ul>
+    <li>O que ele come e como obtém alimento</li>
+    <li>Quem são seus predadores e competidores</li>
+    <li>Onde vive, quando se reproduz e como interage com o ambiente</li>
+    <li>Como contribui para processos ecológicos, como polinização, predação, decomposição</li>
+  </ul>
+  <p>
+    Assim, podemos dizer que o <strong>nível trófico faz parte do nicho</strong>, mas o nicho é mais abrangente. Por exemplo:
+  </p>
+  <div class="curiosity-box">
+    <p>
+      🐞 Uma joaninha é um <strong>consumidor secundário</strong> (nível trófico), pois se alimenta de pulgões (herbívoros).  
+      <br>
+      Mas seu <strong>nicho ecológico</strong> inclui muito mais: onde ela vive (nas folhas), seu ciclo de vida, seus inimigos naturais, o papel que exerce no controle biológico e as condições que tolera.
+    </p>
+  </div>
+  <p>
+    Compreender essa relação permite planejar melhor os agroecossistemas, aproveitando o papel ecológico completo de cada espécie — não apenas sua função na cadeia alimentar, mas também suas contribuições para a saúde do sistema como um todo.
+  </p>
+</div>
+

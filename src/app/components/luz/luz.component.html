@@ -1,0 +1,55 @@
+<div class="explanation">
+  <h3>Luz ☀️</h3>
+  <p>
+    A luz solar é uma das principais fontes de energia em um agroecossistema. É através da luz que as plantas realizam a fotossíntese, processo que converte energia solar em matéria orgânica e sustenta toda a cadeia alimentar do sistema. A distribuição, intensidade e duração da luz afetam diretamente o crescimento das plantas, a produção agrícola e a biodiversidade.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Importante 🔦</h4>
+  <h3>Como a luz influencia e pode ser manejada em agroecossistemas?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('fotossintese')">Fotossíntese e Produção 🌿</button>
+    <div *ngIf="expandedSections['fotossintese']">
+      <ul>
+        <li>A quantidade de luz disponível afeta diretamente a taxa de fotossíntese.</li>
+        <li>Plantas com exigências diferentes de luz devem ser posicionadas estrategicamente (sombra, meia-sombra, pleno sol).</li>
+        <li><strong>Exemplo:</strong> alface prefere ambientes com boa luz, mas sombra parcial pode evitar que espigue.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('estratificacao')">Estratificação Vegetal em SAFs 🌳</button>
+    <div *ngIf="expandedSections['estratificacao']">
+      <ul>
+        <li>Sistemas agroflorestais usam plantas de diferentes alturas para otimizar o uso da luz.</li>
+        <li>Plantas altas capturam luz intensa no topo; plantas menores aproveitam luz difusa abaixo.</li>
+        <li><strong>Exemplo:</strong> banana no estrato médio, cacau em sub-bosque, mandioca em pleno sol.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('competicaoLuz')">Competição por Luz ☁️</button>
+    <div *ngIf="expandedSections['competicaoLuz']">
+      <ul>
+        <li>Quando há muitas plantas próximas ou mal organizadas, elas disputam luz, prejudicando seu desenvolvimento.</li>
+        <li>Espaçamento adequado e podas são práticas que reduzem essa competição.</li>
+        <li>Ervas daninhas também podem sombrear cultivos e devem ser manejadas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('microclima')">Luz e Microclima 🌤️</button>
+    <div *ngIf="expandedSections['microclima']">
+      <ul>
+        <li>A luz influencia a temperatura e evaporação no solo e na parte aérea das plantas.</li>
+        <li>Cultivos baixos e coberturas vegetais ajudam a reduzir insolação direta e manter umidade.</li>
+        <li><strong>Exemplo:</strong> abóbora sombreando o solo, criando um microclima mais fresco e úmido.</li>
+      </ul>
+    </div>
+  </div>
+</div>

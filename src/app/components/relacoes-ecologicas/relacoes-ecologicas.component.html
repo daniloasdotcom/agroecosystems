@@ -1,0 +1,84 @@
+<div class="explanation">
+  <h3>Relações Ecológicas</h3>
+  <p>
+    Relações ecológicas são as interações entre organismos dentro de um ecossistema, essenciais para o funcionamento da vida e do equilíbrio dos sistemas naturais. Elas podem ser classificadas como:
+  </p>
+  <ul>
+    <li><strong>Intraespecíficas:</strong> ocorrem entre indivíduos da mesma espécie.</li>
+    <li><strong>Interespecíficas:</strong> ocorrem entre indivíduos de espécies diferentes.</li>
+  </ul>
+  <p>
+    Compreender essas relações permite desenvolver práticas agrícolas mais cooperativas com a natureza, reduzindo a necessidade de insumos externos e promovendo a autorregulação dos sistemas produtivos.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Importante 🌐</h4>
+  <h3>Como essas relações se manifestam e podem ser manejadas em agroecossistemas?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('mutualismo')">🌼 Mutualismo</button>
+    <div *ngIf="expandedSections['mutualismo']">
+      <ul>
+        <li>Ambas as espécies se beneficiam.</li>
+        <li><strong>Exemplo agroecológico:</strong> abelhas e plantas cultivadas. As abelhas obtêm néctar e, em troca, polinizam as flores, aumentando a produção de frutas e sementes.</li>
+        <li><strong>Prática:</strong> manter flores silvestres, evitar agrotóxicos e instalar caixas de abelhas nativas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('competicao')">🌱 Competição</button>
+    <div *ngIf="expandedSections['competicao']">
+      <ul>
+        <li>As espécies competem por recursos limitados (luz, água, nutrientes).</li>
+        <li><strong>Exemplo agroecológico:</strong> ervas daninhas competem com hortaliças.</li>
+        <li><strong>Prática:</strong> uso de consórcios planejados e cobertura do solo com plantas de cobertura ou palha para evitar competição indesejada.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('predacao')">🐞 Predação</button>
+    <div *ngIf="expandedSections['predacao']">
+      <ul>
+        <li>Um organismo se alimenta de outro (presa).</li>
+        <li><strong>Exemplo agroecológico:</strong> joaninhas predam pulgões; galinhas comem insetos no pomar.</li>
+        <li><strong>Prática:</strong> atrair e conservar predadores naturais através da diversificação e do uso de plantas atrativas.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('parasitismo')">🦟 Parasitismo</button>
+    <div *ngIf="expandedSections['parasitismo']">
+      <ul>
+        <li>Um organismo (parasita) se beneficia enquanto o outro (hospedeiro) é prejudicado.</li>
+        <li><strong>Exemplo agroecológico:</strong> vespas parasitoides que depositam ovos em lagartas-praga, matando-as ao longo do tempo.</li>
+        <li><strong>Prática:</strong> plantar flores que atraem parasitoides adultos e evitar agrotóxicos que os eliminam.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('comensalismo')">🐦 Comensalismo</button>
+    <div *ngIf="expandedSections['comensalismo']">
+      <ul>
+        <li>Uma espécie se beneficia, enquanto a outra não é afetada.</li>
+        <li><strong>Exemplo agroecológico:</strong> aves que se abrigam em árvores cultivadas, auxiliando indiretamente no controle de insetos.</li>
+        <li><strong>Prática:</strong> manter árvores e elementos naturais no sistema agrícola para favorecer essas interações.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('amensalismo')">🍂 Amensalismo</button>
+    <div *ngIf="expandedSections['amensalismo']">
+      <ul>
+        <li>Uma espécie é inibida ou prejudicada, enquanto a outra não é afetada.</li>
+        <li><strong>Exemplo agroecológico:</strong> plantas como tagetes (cravo-de-defunto) liberam compostos alelopáticos que suprimem o crescimento de nematoides ou plantas competidoras.</li>
+        <li><strong>Prática:</strong> uso de plantas repelentes ou cobertura verde com efeitos alelopáticos planejados.</li>
+      </ul>
+    </div>
+  </div>
+</div>

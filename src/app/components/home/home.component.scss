@@ -66,9 +66,16 @@ ul {
 }
 
 #estrategiark {
-  background: linear-gradient(135deg, #9be15d, #00e3ae);
+  background: white;
 }
 
+#niveltrofico {
+  background: linear-gradient(135deg, #a8e063, #56ab2f);
+}
+
+#ciclagemnutrientes {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+}
 
 /* Ajustes responsivos para evitar sobreposição com o header */
 @media (max-width: 768px) {

@@ -1,15 +1,14 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // ⬅️ Importar aqui
 
 @Component({
-  selector: 'app-concept-pestmanagement',
+  selector: 'app-nivel-trofico',
   standalone: true,
-  imports: [NgOptimizedImage, CommonModule],
-  templateUrl: './concept-pestmanagement.component.html',
-  styleUrl: './concept-pestmanagement.component.scss'
+  imports: [CommonModule],
+  templateUrl: './nivel-trofico.component.html',
+  styleUrl: './nivel-trofico.component.scss'
 })
-export class ConceptPestmanagementComponent {
+export class NivelTroficoComponent {
   expandedSections: { [key: string]: boolean } = {
       origem: false,
       componentes: false,

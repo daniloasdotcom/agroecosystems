@@ -12,13 +12,16 @@ import { SucessaoComponent } from '../sucessao/sucessao.component';
 import { NichoComponent } from '../nicho/nicho.component';
 import { ProducaoPrimariaComponent } from '../producao-primaria/producao-primaria.component';
 import { EstrategiarkComponent } from '../estrategiark/estrategiark.component';
+import { NivelTroficoComponent } from '../nivel-trofico/nivel-trofico.component';
+import { RelacoesEcologicasComponent } from '../relacoes-ecologicas/relacoes-ecologicas.component'; 
+import { CiclagemNutrientesComponent } from '../ciclagem-nutrientes/ciclagem-nutrientes.component'; // Importar CiclagemNutrientesComponent
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, EcosystemComparisonComponent, EcologicalIndustrialComponent, ConceptPestmanagementComponent, IndividuoComponent, BiodiversidadeComponent, PerturbationComponent, SucessaoComponent, NichoComponent, ProducaoPrimariaComponent, EstrategiarkComponent], // ⬅️ Adicionar aqui
+  imports: [CommonModule, HeaderComponent, FooterComponent, EcosystemComparisonComponent, EcologicalIndustrialComponent, ConceptPestmanagementComponent, IndividuoComponent, BiodiversidadeComponent, PerturbationComponent, SucessaoComponent, NichoComponent, ProducaoPrimariaComponent, EstrategiarkComponent, NivelTroficoComponent, RelacoesEcologicasComponent, CiclagemNutrientesComponent], // ⬅️ Adicionar aqui
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
