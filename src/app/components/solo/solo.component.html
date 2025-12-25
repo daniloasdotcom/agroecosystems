@@ -1,0 +1,69 @@
+<div class="explanation">
+  <h3>Solo 🌍</h3>
+  <p>
+    O solo é a base física e ecológica de todo agroecossistema. É nele que ocorrem interações fundamentais entre matéria orgânica, água, ar, nutrientes e organismos vivos. Um solo saudável sustenta plantas vigorosas, promove a biodiversidade e regula o ciclo da água e dos nutrientes.
+  </p>
+  <p>
+    A estrutura, composição e vida do solo influenciam diretamente a produtividade agrícola e a resiliência ecológica dos sistemas. Manejos que respeitam esses fatores favorecem a fertilidade natural e reduzem a dependência de insumos externos.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Importante 🌾</h4>
+  <h3>Como o solo influencia e pode ser manejado em agroecossistemas?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('estruturaSolo')">Estrutura e Aeração 🕳️</button>
+    <div *ngIf="expandedSections['estruturaSolo']">
+      <ul>
+        <li>Solos bem estruturados permitem boa infiltração de água e desenvolvimento radicular.</li>
+        <li>Evitar compactação (por pisoteio ou máquinas) é essencial.</li>
+        <li><strong>Prática:</strong> uso de plantas com raízes profundas e adição de matéria orgânica para melhorar a estrutura.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('vidaSolo')">Vida no Solo 🐛</button>
+    <div *ngIf="expandedSections['vidaSolo']">
+      <ul>
+        <li>O solo é habitat de milhões de organismos, como minhocas, fungos e bactérias.</li>
+        <li>Esses organismos decompõem matéria orgânica e disponibilizam nutrientes às plantas.</li>
+        <li><strong>Prática:</strong> evitar agrotóxicos, manter cobertura do solo e adicionar composto orgânico.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('ciclagemNutrientes')">Ciclagem de Nutrientes ♻️</button>
+    <div *ngIf="expandedSections['ciclagemNutrientes']">
+      <ul>
+        <li>O solo armazena e transforma nutrientes que são absorvidos pelas plantas.</li>
+        <li>A matéria orgânica é a chave para esse processo, pois nutre a biota do solo.</li>
+        <li><strong>Prática:</strong> adubação verde, compostagem e consórcios que favoreçam a ciclagem interna.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('retencaoAgua')">Retenção de Água 💧</button>
+    <div *ngIf="expandedSections['retencaoAgua']">
+      <ul>
+        <li>Solos com boa cobertura vegetal e matéria orgânica retêm mais água e reduzem a erosão.</li>
+        <li>Isso favorece o crescimento das plantas e a resiliência em períodos secos.</li>
+        <li><strong>Prática:</strong> cobertura morta (palha), plantio direto e sistemas agroflorestais.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('indicadoresSaude')">Indicadores de Saúde do Solo 🧪</button>
+    <div *ngIf="expandedSections['indicadoresSaude']">
+      <ul>
+        <li>Cor escura, cheiro agradável, presença de minhocas e estrutura granulada são sinais de solo saudável.</li>
+        <li>A ausência de crostas superficiais e o enraizamento profundo também indicam boa qualidade.</li>
+        <li><strong>Prática:</strong> observação constante e testes caseiros (como o da garrafa PET ou da agregação).</li>
+      </ul>
+    </div>
+  </div>
+</div>

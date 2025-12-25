@@ -9,4 +9,5 @@ export const CONCEITOS_HOME  = [
   { id: 'niveltrofico', titulo: 'Níveis Tróficos' },
   { id: 'relacoesecologicas', titulo: 'Relações Ecológicas' },
   { id: 'ciclagemnutrientes', titulo: 'Ciclagem de Nutrientes' },
+  { id: 'cadeiatrofica', titulo: 'Cadeia Trófica' },
 ];

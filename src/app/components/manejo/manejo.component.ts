@@ -6,11 +6,12 @@ import { ConceptPestmanagementComponent } from '../concept-pestmanagement/concep
 import { ManejoSoloComponent } from '../manejo-solo/manejo-solo.component';
 import { ScutSaatComponent } from '../scut-saat/scut-saat.component';
 import { ManejoAguaComponent } from '../manejo-agua/manejo-agua.component';
+import { ConceptCardComponent } from '../concept-card/concept-card.component';
 
 @Component({
   selector: 'app-manejo',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, ConceptPestmanagementComponent, ManejoSoloComponent, ScutSaatComponent, ManejoAguaComponent],
+  imports: [CommonModule, HeaderComponent, FooterComponent, ConceptPestmanagementComponent, ManejoSoloComponent, ScutSaatComponent, ManejoAguaComponent, ConceptCardComponent],
   templateUrl: './manejo.component.html',
   styleUrl: './manejo.component.scss'
 })

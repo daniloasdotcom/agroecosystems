@@ -1,26 +1,26 @@
-<!---<header>
-  <h1>AgroEcoSystem</h1>
-  <app-busca></app-busca>
-
-  <nav>
-    <a href="#intro">Início</a>
-  </nav>
-</header>--->
-
 <header>
-  <div class="header-top">
-    <h1>AgroEcoSistemas</h1>
-    <button class="hamburger-menu" (click)="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
-  </div>
-  <app-busca></app-busca>
+  <div class="header-container">
+    
+    <div class="logo-area">
+      <h1>AgroEcoSistemas</h1>
+      
+      <button class="hamburger-menu" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
 
-  <nav [class.menu-open]="isMenuOpen">
-    <a href="./home">Início</a>
-    <a href="./manejo">Manejo</a>
-    <a href="./componentes">Componentes</a>
-  </nav>
+    <div class="search-area">
+      <app-busca></app-busca>
+    </div>
+
+    <nav [class.menu-open]="isMenuOpen">
+      <a routerLink="/home" routerLinkActive="active-link" (click)="closeMenu()">Conceitos</a>
+      <a routerLink="/manejo" routerLinkActive="active-link" (click)="closeMenu()">Manejo</a>
+      <a routerLink="/componentes" routerLinkActive="active-link" (click)="closeMenu()">Componentes</a>
+      <a routerLink="/simulador" routerLinkActive="active-link" (click)="closeMenu()">Simulador</a>
+    </nav>
+
+  </div>
 </header>

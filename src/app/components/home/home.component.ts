@@ -14,14 +14,16 @@ import { ProducaoPrimariaComponent } from '../producao-primaria/producao-primari
 import { EstrategiarkComponent } from '../estrategiark/estrategiark.component';
 import { NivelTroficoComponent } from '../nivel-trofico/nivel-trofico.component';
 import { RelacoesEcologicasComponent } from '../relacoes-ecologicas/relacoes-ecologicas.component'; 
-import { CiclagemNutrientesComponent } from '../ciclagem-nutrientes/ciclagem-nutrientes.component'; // Importar CiclagemNutrientesComponent
+import { CiclagemNutrientesComponent } from '../ciclagem-nutrientes/ciclagem-nutrientes.component';
+import { CadeiaTroficaComponent } from '../cadeia-trofica/cadeia-trofica.component';
+import { ConceptCardComponent } from '../concept-card/concept-card.component';
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, FooterComponent, EcosystemComparisonComponent, EcologicalIndustrialComponent, ConceptPestmanagementComponent, IndividuoComponent, BiodiversidadeComponent, PerturbationComponent, SucessaoComponent, NichoComponent, ProducaoPrimariaComponent, EstrategiarkComponent, NivelTroficoComponent, RelacoesEcologicasComponent, CiclagemNutrientesComponent], // ⬅️ Adicionar aqui
+  imports: [CommonModule, HeaderComponent, FooterComponent, EcosystemComparisonComponent, EcologicalIndustrialComponent, ConceptPestmanagementComponent, IndividuoComponent, BiodiversidadeComponent, PerturbationComponent, SucessaoComponent, NichoComponent, ProducaoPrimariaComponent, EstrategiarkComponent, NivelTroficoComponent, RelacoesEcologicasComponent, CiclagemNutrientesComponent, CadeiaTroficaComponent, ConceptCardComponent], // ⬅️ Adicionar aqui
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

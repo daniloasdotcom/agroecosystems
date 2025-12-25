@@ -1,101 +1,68 @@
-/* Fonte base global para manter consistência */
-body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+/* =========================================
+   1. LAYOUT GERAL DA PÁGINA
+   ========================================= */
+:host {
+  display: block;
+  background-color: #f4f7f6; /* Fundo padrão */
+  min-height: 100vh;
 }
 
-/* Centralização e estilo base */
-section {
-  padding: 20px 20px;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  color: black;
-  border-radius: 10px;
+.page-content {
+  margin-top: 100px; 
+  padding: 20px;
   max-width: 900px;
-  margin: 0 auto 30px;
-  scroll-margin-top: 120px; // Compensa o header fixo ao navegar por ID
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
 }
 
-/* Estilização de títulos */
-h2 {
-  margin-bottom: 10px;
-  color: #000000;
-  font-size: 2rem;
-  font-weight: 700;
+/* =========================================
+   2. AJUSTE DOS CARDS
+   ========================================= */
+app-concept-card {
+  scroll-margin-top: 140px; 
+  display: block;
 }
 
-p {
+/* =========================================
+   3. TIPOGRAFIA E ESTILOS INTERNOS
+   ========================================= */
+p, ul, li {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #000000;
+  color: #333333;
+  margin-bottom: 1rem;
 }
 
-/* Lista com centralização opcional */
-ul {
-  font-size: 1.1rem;
-  padding-left: 0;
-  line-height: 1.6;
-  list-style-position: inside;
-  color: #000000;
-}
-
-
-#manejodepragas {
-  /*background: linear-gradient(135deg, #b7f8db, #50c878);*/
-  background: white;
-}
-
-#niveisorganizacao {
-  background: linear-gradient(135deg, #9be15d, #00e3ae);
-}
-
-
-#perturbation {
-  background: linear-gradient(135deg, #d4fc79, #96e6a1);
-}
-
-#sucessao {
-  background: white;
-}
-
-#manejodosolo {
-  background: linear-gradient(135deg, #b7f8db, #50c878)
-}
-
-/* Ajustes responsivos para evitar sobreposição com o header */
-@media (max-width: 768px) {
-  #intro {
-    padding-top: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  #intro {
-    padding-top: 220px;
-  }
-}
-
-/* Subseções expansíveis */
+/* =========================================
+   4. MANUTENÇÃO DE SUBSEÇÕES (LEGADO)
+   ========================================= */
+/* Mantivemos isso pois você usa subseções expansíveis dentro das explicações */
 .subsection {
   margin-top: 20px;
   text-align: left;
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #eee;
 
   button {
-    font-family: inherit; // ✅ garante que o botão use a mesma fonte do contexto
+    font-family: inherit;
     background: none;
     border: none;
-    color: #000000;
+    color: #2e7d32; /* Verde para indicar clique */
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
     text-align: left;
     padding: 10px;
     width: 100%;
-    border-left: #000000 1px solid;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
 
     &:hover {
-      background: rgba(255, 0, 0, 0.1);
+      background: rgba(46, 125, 50, 0.05); /* Fundo verde muito leve */
     }
   }
 
@@ -106,11 +73,17 @@ ul {
   }
 }
 
-/* Animação de entrada */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
-.page-content {
-  margin-top: 200px; // Ajuste conforme o tamanho do seu header
+
+/* =========================================
+   5. RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) {
+  .page-content {
+    margin-top: 140px;
+    padding: 15px;
+  }
 }

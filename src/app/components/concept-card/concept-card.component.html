@@ -1,0 +1,107 @@
+<div class="card-container" [id]="id" [class.active]="isOpen">
+  
+  <div class="flip-wrapper" [class.girado]="isFlipped" [class.sizing-back]="isBackActive">
+
+    <div class="face-front">
+      
+      <div class="card-header" (click)="toggle()">
+        <div class="header-left">
+          <h3>{{ titulo }}</h3>
+        </div>
+        <div class="header-actions">
+          <button class="btn-print no-print" (click)="imprimir($event)" title="Imprimir este conteúdo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+          </button>
+          <span class="icon-arrow no-print" [class.rotated]="isOpen">▼</span>
+        </div>
+      </div>
+
+      <div class="card-body" [class.show]="isOpen">
+        <div class="content-wrapper">
+          <ng-content></ng-content>
+          
+          <div class="quiz-call-to-action no-print" *ngIf="perguntas.length > 0">
+            <button (click)="virarCard($event)" class="btn-quiz">
+              🧠 Testar Conhecimento
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="face-back">
+      
+      <div class="quiz-container" *ngIf="perguntas.length > 0 && !quizFinalizado">
+        
+        <div class="quiz-header" style="margin-bottom: 20px;">
+          <h4>Quiz Rápido: {{ titulo }}</h4>
+          <span style="font-size: 0.9rem; color: #666; display: block; margin-top: -15px; margin-bottom: 20px;">
+            Questão {{ indiceAtual + 1 }} de {{ perguntas.length }}
+          </span>
+        </div>
+        
+        <p class="quiz-question">{{ perguntaAtual.pergunta }}</p>
+        
+        <div class="quiz-options">
+          <button 
+            *ngFor="let opcao of perguntaAtual.opcoes; let i = index"
+            class="option-btn"
+            [class.correct]="mostrarFeedback && i === perguntaAtual.correta"
+            [class.wrong]="mostrarFeedback && i !== perguntaAtual.correta && i === selectedIndex"
+            (click)="verificarResposta(i)"
+            [disabled]="mostrarFeedback">
+            {{ opcao }}
+          </button>
+        </div>
+
+        <div class="feedback-area" *ngIf="mostrarFeedback" style="margin-top: 20px;">
+          <p class="quiz-feedback" [class.success]="acertouAtual" style="margin: 10px 0;">
+            {{ acertouAtual ? '🎉 Muito bem!' : '❌ Ops, resposta incorreta.' }}
+          </p>
+          
+          <button class="btn-quiz next-btn" (click)="proximaPergunta()">
+            {{ indiceAtual === perguntas.length - 1 ? 'Ver Resultado Final' : 'Próxima Questão ➡' }}
+          </button>
+        </div>
+
+        <button *ngIf="!mostrarFeedback" class="btn-voltar" (click)="virarCard($event)">
+          ↩ Voltar ao Estudo
+        </button>
+      </div>
+
+      <div class="quiz-container result-container" *ngIf="quizFinalizado">
+        <h3 style="color: #2e7d32; font-size: 1.5rem;">Quiz Finalizado! 🏆</h3>
+        
+        <div class="score-display" style="font-size: 2rem; font-weight: bold; margin: 20px 0; color: #333;">
+          <span style="color: #2e7d32;">{{ pontos }}</span> / {{ perguntas.length }}
+        </div>
+
+        <p *ngIf="pontos === perguntas.length">Excelente! Você domina este assunto.</p>
+        <p *ngIf="pontos < perguntas.length && pontos > 0">Bom trabalho! Continue estudando.</p>
+        <p *ngIf="pontos === 0">Que tal revisar o conteúdo e tentar de novo?</p>
+
+        <div class="action-buttons" style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+          <button class="btn-quiz" (click)="reiniciarQuiz()">Tentar Novamente ↺</button>
+          <button class="btn-voltar" (click)="virarCard($event)">Voltar ao Texto</button>
+        </div>
+      </div>
+
+      <div class="quiz-container" *ngIf="perguntas.length === 0">
+        <p>Nenhuma questão cadastrada para este tópico.</p>
+        <button class="btn-voltar" (click)="virarCard($event)">↩ Voltar</button>
+      </div>
+
+    </div>
+
+  </div> <div class="print-footer">
+    <div class="footer-left">
+      © AgroEcoSistemas | <strong>agroecossistema.online</strong> | Danilo Andrade Santos
+    </div>
+    <div class="footer-right"></div>
+  </div>
+
+</div>

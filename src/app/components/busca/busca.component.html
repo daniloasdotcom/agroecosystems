@@ -4,7 +4,7 @@
       type="text"
       [(ngModel)]="termo"
       (input)="onInput()"
-      placeholder="🔍 Buscar conceito..."
+      [placeholder]="placeholderText"
     />
     <button class="toggle" (click)="toggleDropdown()">
       ▼

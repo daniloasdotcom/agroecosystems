@@ -1,149 +1,188 @@
+/* Variáveis de cor (para facilitar ajustes) */
+$primary-green: #2e7d32;
+$dark-text: #1b1b1b;
+$header-bg: rgba(255, 255, 255, 0.95);
+$shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #2e7d32;
-  color: white;
+  background-color: $header-bg;
+  backdrop-filter: blur(10px); /* Efeito moderno de vidro fosco */
   z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  display: flex; /* Header como um flex container */
-  align-items: center; /* Alinha itens verticalmente ao centro */
+  box-shadow: $shadow;
+  border-bottom: 1px solid #eaeaea;
+}
 
-  /* Estilos para telas grandes (desktop) */
-  @media (min-width: 769px) {
-    flex-direction: row; /* Itens em linha no desktop */
-    justify-content: space-between; /* Espaço entre título/busca e nav */
-    height: 70px; /* Altura fixa para o header */
-    padding: 0 30px; /* Padding horizontal para desktop */
+.header-container {
+  max-width: 1200px; /* Limita a largura em telas muito grandes */
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    /* Garante que .header-top não afete o layout flex no desktop */
-    .header-top {
-      display: contents; /* Seus filhos (h1, button) se comportam como irmãos do app-busca e nav */
-    }
-
-    h1 {
-      margin: 0; /* Remove margens extras */
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-    }
-
-    /* Componente app-busca - Ajuste de ordem e visibilidade se necessário */
-    app-busca {
-      margin-left: auto; /* Empurra a busca para a direita, entre o h1 e nav */
-      margin-right: 20px; /* Espaçamento da busca para o menu */
-      width: auto; /* A busca ocupa seu espaço natural */
-    }
-
-    /* Navegação em desktop */
-    nav {
-      display: flex; /* Garante visibilidade da nav */
-      flex-direction: row; /* Links em linha */
-      gap: 30px;
-      position: static; /* Remove posicionamento absoluto em desktop */
-      height: auto;
-      overflow: visible;
-      background-color: transparent; /* Fundo transparente */
-      padding: 0;
-      box-shadow: none;
-      text-align: left;
-    }
-
-    /* Esconde o botão hambúrguer em desktop */
-    .hamburger-menu {
-      display: none;
-    }
+/* --- LOGO --- */
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  h1 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-green; /* Verde da marca */
+    margin: 0;
+    letter-spacing: -0.5px;
+    cursor: default;
   }
+}
 
-  /* Estilos para telas pequenas (mobile) */
-  @media (max-width: 768px) {
-    flex-direction: column; /* Itens empilhados */
-    padding: 10px 15px; /* Padding reduzido para mobile */
-    align-items: flex-start; /* Alinha os itens à esquerda */
-    height: auto; /* Altura automática */
+/* --- ÁREA DE BUSCA --- */
+.search-area {
+  flex: 1; /* Ocupa o espaço disponível */
+  display: flex;
+  justify-content: center; /* Centraliza a busca */
+  padding: 0 20px;
+  max-width: 500px; /* Não deixa a busca ficar gigante */
+}
 
-    /* Container para o título e o botão hambúrguer */
-    .header-top {
-      display: flex;
-      justify-content: space-between; /* Título e hambúrguer nas extremidades */
-      align-items: center;
-      width: 100%; /* Ocupa toda a largura do header */
-      margin-bottom: 5px; /* Espaço entre esta linha e a busca */
+/* --- NAVEGAÇÃO DESKTOP --- */
+nav {
+  display: flex;
+  gap: 24px;
+
+  a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-green;
     }
 
-    h1 {
-      margin: 0; /* Remove margens padrão */
-      font-size: clamp(1.6rem, 6vw, 2.4rem);
-    }
+    /* Linha animada embaixo do link ativo */
+    &.active-link {
+      color: $primary-green;
+      font-weight: 600;
 
-    /* Componente app-busca em mobile - AGORA CENTRALIZADO */
-    app-busca {
-      width: 100%; /* Continua ocupando 100% da largura do header */
-      margin-bottom: 10px; /* Espaço abaixo da busca */
-      display: flex; /* Torna o app-busca um flex container */
-      justify-content: center; /* Centraliza o conteúdo dentro de app-busca */
-    }
-
-    /* Navegação em mobile (escondida por padrão) */
-    nav {
-      flex-direction: column; /* Links em coluna */
-      gap: 15px; /* Espaçamento vertical entre links */
-      width: 100%;
-      height: 0; /* Menu fechado (altura zero) */
-      overflow: hidden; /* Esconde o conteúdo */
-      background-color: #2e7d32; /* Fundo para o menu expandido */
-      padding: 0;
-      position: absolute; /* Posiciona o menu abaixo do header-top */
-      top: 60px; /* Ajuste este valor se a altura do seu .header-top for diferente */
-      left: 0;
-      right: 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-      text-align: center;
-      z-index: 999; /* Abaixo do hambúrguer, mas acima do conteúdo */
-      transition: all 0.3s ease-in-out; /* Transição suave para abertura/fechamento */
-
-      /* Quando a classe 'menu-open' é adicionada via Angular/JS */
-      &.menu-open {
-        height: auto; /* Aumenta a altura para mostrar o menu */
-        padding: 20px 0; /* Adiciona padding quando aberto */
-      }
-
-      a {
-        margin: 0;
-        padding: 10px 0; /* Padding interno para cada link no menu */
-        width: 100%; /* Links ocupam a largura total para clique */
-        display: block; /* Para que o padding e width funcionem nos links */
-      }
-    }
-
-    /* Estilos para o botão do menu hambúrguer */
-    .hamburger-menu {
-      display: block; /* Mostra o hambúrguer em telas pequenas */
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 10px;
-      z-index: 1001; /* Garante que fique acima da nav expandida */
-
-      .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px 0;
-        transition: 0.4s;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $primary-green;
+        border-radius: 2px;
       }
     }
   }
 }
 
-/* Estilos para os links de navegação (fora do @media para serem globais e depois sobrescritos) */
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+/* --- MENU HAMBÚRGUER (Escondido no Desktop) --- */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 15px;
 
-  &:hover {
-    text-decoration: underline;
+  .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $primary-green;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
   }
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap; /* Permite quebrar linha */
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  /* No mobile, Logo e Hambúrguer ocupam a primeira linha inteira */
+  .logo-area {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .hamburger-menu {
+    display: block; /* Aparece o botão */
+    
+    /* Animação do X quando aberto */
+    &.active {
+      .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 5px); }
+      .bar:nth-child(2) { opacity: 0; }
+      .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -5px); }
+    }
+  }
+
+  /* Busca vai para a linha de baixo e ocupa tudo */
+  .search-area {
+    width: 100%;
+    max-width: none; /* Remove limite */
+    padding: 0;
+    margin-bottom: 5px;
+    order: 2; /* Garante ordem visual */
+  }
+
+  /* Menu Mobile Dropdown */
+  nav {
+    display: none; /* Escondido por padrão */
+    width: 100%;
+    flex-direction: column;
+    background-color: white;
+    border-top: 1px solid #eee;
+    padding: 0;
+    gap: 0;
+    order: 3;
+    animation: slideDown 0.3s ease forwards;
+
+    &.menu-open {
+      display: flex; /* Mostra quando aberto */
+    }
+
+    a {
+      padding: 15px 10px;
+      border-bottom: 1px solid #f0f0f0;
+      width: 100%;
+      text-align: center;
+      
+      &:hover {
+        background-color: #f9f9f9;
+      }
+      
+      &.active-link::after {
+        display: none; /* Remove a linha animada no mobile */
+      }
+      &.active-link {
+        background-color: #e8f5e9; /* Fundo verde claro no ativo mobile */
+        color: $primary-green;
+      }
+    }
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

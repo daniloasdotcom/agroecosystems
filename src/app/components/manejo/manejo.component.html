@@ -1,20 +1,31 @@
 <app-header></app-header>
+
 <main class="page-content">
-<section id="manejodepragas">
-  <h2>Manejo Ecológico de Pragas e Doenças</h2>
-  <app-concept-pestmanagement></app-concept-pestmanagement>
-</section>
-<section id="manejodosolo">
-  <h2>Manejo do Solo</h2>
-  <app-manejo-solo></app-manejo-solo>
-</section>
-<section id="scut-saat">
-  <h2>SCUT e SAAT</h2>
-  <app-scut-saat></app-scut-saat>
-</section>
-<section id="manejodaagua">
-  <h2>Manejo da Água</h2>
-  <app-manejo-agua></app-manejo-agua>
-</section>
+
+  <app-concept-card 
+    id="manejodepragas" 
+    titulo="Manejo Ecológico de Pragas e Doenças">
+    <app-concept-pestmanagement></app-concept-pestmanagement>
+  </app-concept-card>
+
+  <app-concept-card 
+    id="manejodosolo" 
+    titulo="Manejo do Solo">
+    <app-manejo-solo></app-manejo-solo>
+  </app-concept-card>
+
+  <app-concept-card 
+    id="scut-saat" 
+    titulo="SCUT e SAAT">
+    <app-scut-saat></app-scut-saat>
+  </app-concept-card>
+
+  <app-concept-card 
+    id="manejodaagua" 
+    titulo="Manejo da Água">
+    <app-manejo-agua></app-manejo-agua>
+  </app-concept-card>
+
 </main>
+
 <app-footer></app-footer>

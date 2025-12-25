@@ -1,121 +1,56 @@
-/* Fonte base global para manter consistência */
-body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+/* =========================================
+   1. LAYOUT GERAL DA PÁGINA
+   ========================================= */
+:host {
+  display: block;
+  background-color: #f4f7f6; /* O mesmo fundo cinza-suave da Home */
+  min-height: 100vh;
 }
 
-/* Centralização e estilo base */
-section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  color: black;
-  border-radius: 10px;
-  max-width: 900px;
-  margin: 0 auto 30px;
-  scroll-margin-top: 120px; // Compensa o header fixo ao navegar por ID
-}
-
-/* Estilização de títulos */
-h2 {
-  margin-bottom: 10px;
-  color: #000000;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #000000;
-}
-
-/* Lista com centralização opcional */
-ul {
-  font-size: 1.1rem;
-  padding-left: 0;
-  line-height: 1.6;
-  list-style-position: inside;
-  color: #000000;
-}
-
-/* Gradientes por seção */
-#luz {
-  background: linear-gradient(135deg, #a8e063, #56ab2f);
-  padding-top: 40px; // padrão para desktops
-}
-
-#manejodepragas {
-  /*background: linear-gradient(135deg, #b7f8db, #50c878);*/
-  background: white;
-}
-
-#niveisorganizacao {
-  background: linear-gradient(135deg, #9be15d, #00e3ae);
-}
-
-
-#perturbation {
-  background: linear-gradient(135deg, #d4fc79, #96e6a1);
-}
-
-#sucessao {
-  background: white;
-}
-
-#nicho {
-  background: linear-gradient(135deg, #b7f8db, #50c878)
-}
-
-/* Ajustes responsivos para evitar sobreposição com o header */
-@media (max-width: 768px) {
-  #intro {
-    padding-top: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  #intro {
-    padding-top: 220px;
-  }
-}
-
-/* Subseções expansíveis */
-.subsection {
-  margin-top: 20px;
-  text-align: left;
-
-  button {
-    font-family: inherit; // ✅ garante que o botão use a mesma fonte do contexto
-    background: none;
-    border: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    text-align: left;
-    padding: 10px;
-    width: 100%;
-    border-left: #000000 1px solid;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: rgba(255, 0, 0, 0.1);
-    }
-  }
-
-  div {
-    margin-top: 10px;
-    padding-left: 15px;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-}
-
-/* Animação de entrada */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
 .page-content {
-  margin-top: 200px; // Ajuste conforme o tamanho do seu header
+  /* Espaço para o header fixo. Reduzimos de 200px para 100px pois o novo header é menor */
+  margin-top: 100px; 
+  padding: 20px;
+  max-width: 900px; /* Centraliza o conteúdo */
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+}
+
+/* =========================================
+   2. AJUSTE DOS CARDS E BUSCA
+   ========================================= */
+app-concept-card {
+  /* Isso garante que quando a busca rolar até o item, o título não fique escondido atrás do header */
+  scroll-margin-top: 140px; 
+  display: block; 
+}
+
+/* =========================================
+   3. TIPOGRAFIA DO CONTEÚDO
+   ========================================= */
+/* Estilos para o texto que vem dentro dos componentes filhos (<app-luz>, etc) */
+p, ul, li {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333333; /* Cinza escuro para leitura confortável */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  /* Caso algum componente interno ainda use h2, garantimos que não quebre o layout */
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   4. RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 768px) {
+  .page-content {
+    margin-top: 140px; /* Header mobile pode ser mais alto */
+    padding: 15px;
+  }
 }

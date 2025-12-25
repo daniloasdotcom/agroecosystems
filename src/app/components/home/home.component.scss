@@ -1,133 +1,110 @@
-/* Fonte base global para manter consistência */
-body {
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
+/* =========================================
+   1. LAYOUT GERAL DA PÁGINA
+   ========================================= */
 
-/* Centralização e estilo base */
-section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #ccc;
-  text-align: center;
-  color: black;
-  border-radius: 10px;
-  max-width: 900px;
-  margin: 0 auto 30px;
-  scroll-margin-top: 120px; // Compensa o header fixo ao navegar por ID
-}
-
-/* Estilização de títulos */
-h2 {
-  margin-bottom: 10px;
-  color: #000000;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #000000;
-}
-
-/* Lista com centralização opcional */
-ul {
-  font-size: 1.1rem;
-  padding-left: 0;
-  line-height: 1.6;
-  list-style-position: inside;
-  color: #000000;
-}
-
-/* Gradientes por seção */
-#intro {
-  background: linear-gradient(135deg, #a8e063, #56ab2f);
-}
-
-#manejodepragas {
-  /*background: linear-gradient(135deg, #b7f8db, #50c878);*/
-  background: white;
-}
-
-#niveisorganizacao {
-  background: linear-gradient(135deg, #9be15d, #00e3ae);
-}
-
-
-#perturbation {
-  background: linear-gradient(135deg, #d4fc79, #96e6a1);
-}
-
-#sucessao {
-  background: white;
-}
-
-#nicho {
-  background: linear-gradient(135deg, #b7f8db, #50c878)
-}
-
-#estrategiark {
-  background: white;
-}
-
-#niveltrofico {
-  background: linear-gradient(135deg, #a8e063, #56ab2f);
-}
-
-#ciclagemnutrientes {
-  background: linear-gradient(135deg, #d4fc79, #96e6a1);
-}
-
-/* Ajustes responsivos para evitar sobreposição com o header */
-@media (max-width: 768px) {
-  #intro {
-    padding-top: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  #intro {
-    padding-top: 220px;
-  }
-}
-
-/* Subseções expansíveis */
-.subsection {
-  margin-top: 20px;
-  text-align: left;
-
-  button {
-    font-family: inherit; // ✅ garante que o botão use a mesma fonte do contexto
-    background: none;
-    border: none;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.1rem;
-    cursor: pointer;
-    text-align: left;
-    padding: 10px;
-    width: 100%;
-    border-left: #000000 1px solid;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
-
-    &:hover {
-      background: rgba(255, 0, 0, 0.1);
-    }
-  }
-
-  div {
-    margin-top: 10px;
-    padding-left: 15px;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-}
-
-/* Animação de entrada */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Define a cor de fundo da página (atrás dos cards) */
+:host {
+  display: block;
+  background-color: #f4f7f6; /* Um cinza-esverdeado muito suave, ótimo para leitura */
+  min-height: 100vh;
 }
 
 .page-content {
-  margin-top: 200px; // Ajuste conforme o tamanho do seu header
+  /* Espaço para não ficar colado no Header fixo */
+  margin-top: 100px; 
+  padding: 20px;
+  
+  /* Centralização e limite de largura para leitura confortável */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px; /* Espaço extra no final da página */
+}
+
+/* =========================================
+   2. TIPOGRAFIA DO CONTEÚDO (Dentro dos Cards)
+   ========================================= */
+
+/* Estilo padrão para os textos que você coloca dentro dos cards */
+p {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7; /* Aumentei levemente para melhorar a leitura */
+  color: #333333;   /* Cinza escuro em vez de preto absoluto (menos cansaço visual) */
+  margin-bottom: 1.5rem;
+}
+
+/* Ajuste para quando o scroll da busca acontece */
+app-concept-card {
+  scroll-margin-top: 140px; /* Compensa a altura do seu Header fixo */
+  display: block; /* Garante que o componente respeite margens */
+}
+
+/* =========================================
+   3. ESTILOS ESPECÍFICOS (Mantidos e Ajustados)
+   ========================================= */
+
+/* Estilos para a área "subsection" (usada na Introdução) */
+.subsection {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fafafa; /* Fundo levemente diferente para destacar a subseção */
+  border-radius: 8px;
+  border: 1px solid #eee;
+
+  button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    color: #2e7d32; /* Verde agroecológico para indicar ação */
+    font-weight: 600;
+    font-size: 1.05rem;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease, padding-left 0.3s ease;
+
+    &:hover {
+      color: #1b5e20;
+      padding-left: 5px; /* Efeito visual de movimento ao passar o mouse */
+    }
+    
+    &:focus {
+      outline: none;
+    }
+  }
+
+  /* Conteúdo que aparece ao clicar no botão da subsection */
+  div {
+    margin-top: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #a5d6a7; /* Linha guia visual */
+    animation: fadeIn 0.4s ease-in-out;
+  }
+}
+
+/* =========================================
+   4. ANIMAÇÕES
+   ========================================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   5. RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 768px) {
+  .page-content {
+    margin-top: 140px; /* Header costuma ser maior no mobile se quebrar linha */
+    padding: 15px;
+  }
+  
+  p {
+    font-size: 1rem; /* Texto levemente menor em telas pequenas */
+  }
 }

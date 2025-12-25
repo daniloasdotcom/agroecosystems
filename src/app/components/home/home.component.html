@@ -1,66 +1,100 @@
 <app-header></app-header>
+
 <main class="page-content">
-<section id="intro">
-  <h2>O que são Agroecossistemas?</h2>
-  <p>Um agroecossistema é um local de produção agrícola - uma propriedade agrícola, por exemplo - compreendido como um ecossistema. O conceito de agroecossistema proporciona uma estrutura com a qual podemos analisar os sistemas de produção de alimentos, fibras e energia, como um todo, incluindo seus conjuntos complexos de insumos e produção e as interconexões entre as partes que os compõem.</p>
 
-  <div class="subsection">
-    <app-ecosystem-comparison></app-ecosystem-comparison>
-    <app-ecological-industrial></app-ecological-industrial>
-  </div>
+  <app-concept-card 
+    id="intro" 
+    titulo="O que são Agroecossistemas?" 
+    [isOpen]="false">
+    
+    <p>Um agroecossistema é um local de produção agrícola - uma propriedade agrícola, por exemplo - compreendido como um ecossistema. O conceito de agroecossistema proporciona uma estrutura com a qual podemos analisar os sistemas de produção de alimentos, fibras e energia, como um todo, incluindo seus conjuntos complexos de insumos e produção e as interconexões entre as partes que os compõem.</p>
 
-</section>
+    <div class="subsection">
+      <app-ecosystem-comparison></app-ecosystem-comparison>
+      <app-ecological-industrial></app-ecological-industrial>
+    </div>
+  </app-concept-card>
 
-<section id="producaoprimaria">
-  <h2>Produção Primária</h2>
-  <app-producao-primaria></app-producao-primaria>
-</section>
 
-<section id="niveisorganizacao">
-  <h2>Níveis de Organização</h2>
-  <p>Os ecossistemas também são estudados segundo uma hierarquia de organização. No nível mais simples, encontra-se o organismo, cuja relação com o ambiente é analisada pela autoecologia. O agrupamento de organismos da mesma espécie constitui o próximo nível, denominado população. Já o conjunto de populações de diferentes espécies que interagem entre si forma uma comunidade. Por fim, o nível mais abrangente é o ecossistema, que engloba a comunidade e os fatores abióticos com os quais ela interage.</p>
-  <app-individuo></app-individuo>
-</section>
+  <app-concept-card 
+    id="producaoprimaria" 
+    titulo="Produção Primária">
+    <app-producao-primaria></app-producao-primaria>
+  </app-concept-card>
 
-<section id="biodiversidade">
-  <h2>Biodiversidade</h2>
-  <app-biodiversidade></app-biodiversidade>
-</section>
 
-<section id="perturbation">
-  <h2>Perturbação</h2>
-  <app-perturbation></app-perturbation>
-</section>
+  <app-concept-card 
+    id="niveisorganizacao" 
+    titulo="Níveis de Organização">
+    
+    <p>Os ecossistemas também são estudados segundo uma hierarquia de organização. No nível mais simples, encontra-se o organismo, cuja relação com o ambiente é analisada pela autoecologia. O agrupamento de organismos da mesma espécie constitui o próximo nível, denominado população. Já o conjunto de populações de diferentes espécies que interagem entre si forma uma comunidade. Por fim, o nível mais abrangente é o ecossistema, que engloba a comunidade e os fatores abióticos com os quais ela interage.</p>
+    
+    <app-individuo></app-individuo>
+  </app-concept-card>
 
-<section id="sucessao">
-  <h2>Sucessão</h2>
-  <app-sucessao></app-sucessao>
-</section>
 
-<section id="nicho">
-  <h2>Nicho</h2>
-  <app-nicho></app-nicho>
-</section>
+  <app-concept-card 
+    id="biodiversidade" 
+    titulo="Biodiversidade">
+    <app-biodiversidade></app-biodiversidade>
+  </app-concept-card>
 
-<section id="estrategiark">
-  <h2>Estratégia r e K</h2>
-  <app-estrategiark></app-estrategiark>
-</section>
 
-<section id="niveltrofico">
-  <h2>Níveis Tróficos</h2>
-  <app-nivel-trofico></app-nivel-trofico>
-</section>
+  <app-concept-card 
+    id="perturbation" 
+    titulo="Perturbação">
+    <app-perturbation></app-perturbation>
+  </app-concept-card>
 
-<section id="relacoesecologicas">
-  <h2>Relações Ecológicas</h2>
-  <app-relacoes-ecologicas></app-relacoes-ecologicas>
-</section>
 
-<section id="ciclagemnutrientes">
-  <h2>Ciclagem de Nutrientes</h2>
-  <app-ciclagem-nutrientes></app-ciclagem-nutrientes>
-</section>
+  <app-concept-card 
+    id="sucessao" 
+    titulo="Sucessão">
+    <app-sucessao></app-sucessao>
+  </app-concept-card>
+
+
+  <app-concept-card 
+    id="nicho" 
+    titulo="Nicho">
+    <app-nicho></app-nicho>
+  </app-concept-card>
+
+
+  <app-concept-card 
+    id="estrategiark" 
+    titulo="Estratégia r e K">
+    <app-estrategiark></app-estrategiark>
+  </app-concept-card>
+
+
+  <app-concept-card 
+    id="niveltrofico" 
+    titulo="Níveis Tróficos">
+    <app-nivel-trofico></app-nivel-trofico>
+  </app-concept-card>
+
+
+  <app-concept-card 
+    id="relacoesecologicas" 
+    titulo="Relações Ecológicas">
+    <app-relacoes-ecologicas></app-relacoes-ecologicas>
+  </app-concept-card>
+
+
+  <app-concept-card 
+    id="ciclagemnutrientes" 
+    titulo="Ciclagem de Nutrientes">
+    <app-ciclagem-nutrientes></app-ciclagem-nutrientes>
+  </app-concept-card>
+
+
+  <app-concept-card 
+    id="cadeiatrofica" 
+    titulo="Cadeia Trófica">
+    <app-cadeia-trofica></app-cadeia-trofica>
+  </app-concept-card>
 
 </main>
+
 <app-footer></app-footer>

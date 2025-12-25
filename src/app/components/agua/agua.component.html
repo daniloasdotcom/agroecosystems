@@ -1,0 +1,62 @@
+<div class="explanation">
+  <h3>Água 💧</h3>
+  <p>
+    A água é um recurso essencial para todos os organismos de um agroecossistema. Ela atua no transporte de nutrientes, na fotossíntese, na regulação térmica e no crescimento vegetal. A disponibilidade e o manejo eficiente da água são fundamentais para a produtividade e resiliência do sistema.
+  </p>
+</div>
+
+<div class="curiosity-box">
+  <h4>Importante 🚿</h4>
+  <h3>Como a água influencia e pode ser manejada em agroecossistemas?</h3>
+
+  <div class="subsection">
+    <button (click)="toggleSection('cicloHidrologico')">🌧️ Ciclo Hidrológico no Sistema</button>
+    <div *ngIf="expandedSections['cicloHidrologico']">
+      <ul>
+        <li>A água circula no agroecossistema por meio da chuva, infiltração, evaporação e transpiração.</li>
+        <li>Práticas como cobertura do solo e plantio direto ajudam a manter a umidade e reduzir a evaporação.</li>
+        <li><strong>Exemplo:</strong> solos cobertos com palha retêm mais água e favorecem infiltração.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('captacaoArmazenamento')">🚰 Captação e Armazenamento</button>
+    <div *ngIf="expandedSections['captacaoArmazenamento']">
+      <ul>
+        <li>A água da chuva pode ser captada e armazenada em cisternas ou reservatórios para uso em períodos secos.</li>
+        <li><strong>Prática:</strong> sistemas de captação em telhados e barraginhas ajudam a garantir água para irrigação e uso animal.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('irrigacaoEcologica')"> Irrigação Ecológica</button>
+    <div *ngIf="expandedSections['irrigacaoEcologica']">
+      <ul>
+        <li>Irrigação localizada (gotejamento) reduz perdas e direciona a água para a zona radicular.</li>
+        <li><strong>Prática:</strong> uso de sensores de umidade e horários adequados (manhã/tarde) minimizam desperdícios.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('aguaEBiodiversidade')">🦎 Água e Biodiversidade</button>
+    <div *ngIf="expandedSections['aguaEBiodiversidade']">
+      <ul>
+        <li>Fontes de água (cacimbas, açudes, banhados) abrigam animais silvestres e polinizadores.</li>
+        <li><strong>Prática:</strong> manter áreas úmidas e vegetação ciliar protege a biodiversidade e a qualidade da água.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="subsection">
+    <button (click)="toggleSection('aguaErosao')">🌊 Água e Erosão do Solo</button>
+    <div *ngIf="expandedSections['aguaErosao']">
+      <ul>
+        <li>Chuvas intensas podem causar erosão, lavando nutrientes e desestruturando o solo.</li>
+        <li><strong>Prática:</strong> uso de terraços, curvas de nível e cobertura vegetal ajuda a reduzir o escoamento superficial.</li>
+      </ul>
+    </div>
+  </div>
+</div>

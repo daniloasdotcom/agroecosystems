@@ -1,0 +1,151 @@
+<div class="simulador-page">
+  
+  <header class="simulador-header">
+    <h2>📐 Simulador de Design de Agroecossistemas</h2>
+    <p>Defina o grid, crie zonas de manejo e planeie a biodiversidade.</p>
+  </header>
+
+  <div class="painel-controle">
+    <div class="inputs-area">
+      <div class="input-group">
+        <label>Largura (m)</label>
+        <input type="number" [(ngModel)]="largura" min="5" max="50">
+      </div>
+      <div class="input-group">
+        <label>Comprimento (m)</label>
+        <input type="number" [(ngModel)]="comprimento" min="5" max="50">
+      </div>
+      <button class="btn-gerar" (click)="gerarGrade()">🔄 Novo Grid</button>
+    </div>
+  </div>
+
+  <div class="workspace" *ngIf="gridGerado">
+    
+    <div class="grid-section">
+      <div class="terreno-grid" 
+           [style.grid-template-columns]="'repeat(' + largura + ', 1fr)'"
+           (mouseleave)="isDragging = false">
+        
+        <div *ngFor="let bloco of blocos; let i = index" 
+             class="bloco-terra"
+             [style.background-color]="getCorDoBloco(bloco.areaId)"
+             [class.tem-dono]="bloco.areaId !== null"
+             
+             (mousedown)="iniciarArrasto(i, $event)"
+             (mouseenter)="aoPassarMouse(i)">
+        </div>
+      </div>
+      <p class="dica-uso">💡 Clique e arraste para pintar. Clique em uma área já pintada para apagar.</p>
+    </div>
+
+    <div class="areas-section">
+      
+      <div class="areas-header">
+        <h3>Zonas de Manejo</h3>
+        <button class="btn-nova-area" (click)="criarNovaArea()">+ Nova Zona</button>
+      </div>
+
+      <div class="lista-areas">
+        <div *ngFor="let area of areas; let i = index" 
+             class="area-card"
+             [class.ativo]="areaAtiva?.id === area.id"
+             (click)="selecionarAreaParaPintar(area)">
+          
+          <div class="card-top">
+            <div class="cor-indicador" [style.background-color]="area.cor"></div>
+            <input type="text" [(ngModel)]="area.nome" placeholder="Nome da área" (click)="$event.stopPropagation()">
+            <button class="btn-delete" (click)="removerArea(i); $event.stopPropagation()" title="Excluir">🗑️</button>
+          </div>
+          
+          <div class="card-info">
+            <span>{{ area.totalBlocos }} m²</span>
+            <small *ngIf="areaAtiva?.id === area.id" class="status-pintando">EDITANDO</small>
+          </div>
+        </div>
+        
+        <div *ngIf="areas.length === 0" class="empty-state">
+          Nenhuma área criada.
+        </div>
+      </div>
+
+      <div class="painel-analise" *ngIf="areaAtiva">
+        <h4>🧪 Planejamento: {{ areaAtiva.nome }}</h4>
+        <p class="analise-desc">Insira dados e escolha a cultura para ver estratégias.</p>
+
+        <div class="form-solo">
+          <div class="campo">
+            <label>pH (H₂O)</label>
+            <input type="number" [(ngModel)]="areaAtiva.ph" step="0.1" placeholder="5.5">
+          </div>
+          <div class="campo">
+            <label>Argila (%)</label>
+            <input type="number" [(ngModel)]="areaAtiva.argila" placeholder="30">
+          </div>
+          <div class="campo">
+            <label>M.O. (%)</label>
+            <input type="number" [(ngModel)]="areaAtiva.mo" placeholder="2.5">
+          </div>
+        </div>
+
+        <div class="selecao-cultura">
+          <label>O que deseja plantar?</label>
+          <select [(ngModel)]="areaAtiva.culturaSelecionada">
+            <option [ngValue]="null">-- Selecione --</option>
+            <option *ngFor="let cultura of baseCulturas" [ngValue]="cultura">
+              {{ cultura.nome }} 
+              {{ verificarCompatibilidade(areaAtiva, cultura) ? '✅' : '⚠️' }}
+            </option>
+          </select>
+        </div>
+
+        <div class="resultados-box" *ngIf="areaAtiva.culturaSelecionada">
+          
+          <div class="resumo-rapido" *ngIf="areaAtiva.ph">
+            <span class="tag">{{ getDiagnosticoPH(areaAtiva) }}</span>
+            <span class="tag">{{ getDiagnosticoTextura(areaAtiva) }}</span>
+            
+            <span class="tag alerta" *ngIf="!verificarCompatibilidade(areaAtiva, areaAtiva.culturaSelecionada)">
+              ⚠️ Solo inadequado
+            </span>
+          </div>
+
+          <div class="estrategia-card">
+            <div class="card-header-cultura">
+              <h5>{{ areaAtiva.culturaSelecionada.nome }}</h5>
+              <span class="tipo-badge">{{ areaAtiva.culturaSelecionada.tipo }}</span>
+            </div>
+            
+            <p class="funcao-sistema">
+              <strong>Função:</strong> {{ areaAtiva.culturaSelecionada.funcao }}
+            </p>
+
+            <div class="grid-vizinhos">
+              <div class="coluna-vizinhos bons">
+                <h6>✅ Plante ao lado (Consórcio):</h6>
+                <div class="tags-lista">
+                  <span *ngFor="let bom of areaAtiva.culturaSelecionada.vizinhosBons" class="tag-bom">
+                    {{ bom }}
+                  </span>
+                </div>
+              </div>
+
+              <div class="coluna-vizinhos ruins">
+                <h6>❌ Evite plantar perto:</h6>
+                <div class="tags-lista">
+                  <span *ngFor="let ruim of areaAtiva.culturaSelecionada.vizinhosRuins" class="tag-ruim">
+                    {{ ruim }}
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dica-design">
+              💡 <strong>Dica:</strong> Use as sugestões verdes para criar a zona vizinha no grid!
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
